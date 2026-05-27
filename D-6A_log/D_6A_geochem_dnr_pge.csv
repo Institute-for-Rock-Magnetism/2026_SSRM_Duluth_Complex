@@ -1,0 +1,8 @@
+SAMPLE,DEPTH_FROM_FT,DEPTH_TO_FT,DEPTH_MID_FT,Pt_ppb,Pd_ppb,Au_ppb,S_pct,Cu_ppm,Ni_ppm,Cr_ppm,Cl_ppm,F_ppm,MgO_pct,Fe2O3_pct,SiO2_pct,Ag_ppm,Co_ppm,Zn_ppm,Bi_ppm,As_ppm,Sb_ppm,Se_ppm,Te_ppm,Sc_ppm,Y_ppm,Zr_ppm,LITH_DESC
+19806,189.3,199.0,194.15,-10,-2,-1,0.118,190,161,158,60,390,5.04,14.93,44.14,-0.2,75,110,-1,-1,1,1,-1,,25,208,cu-sul-b ol-b gabb-pegmt w/dsd plag-rich clots
+19808,517.0,526.0,521.5,17,4,-1,0.068,130,132,250,40,150,5.97,11.05,49.03,-0.2,58,96,-1,-1,1,2,-1,1,17,93,cu-sul-b cgr pegmtdl gabbro w/minor mixed mgr troct
+19809,681.0,694.0,687.5,-10,4,-1,0.056,100,95,205,40,120,5.19,11.18,48.21,-0.2,58,122,-1,1,-1,1,1,,16,134,cu-sul-b mixed zn of cgr gabc-anorth and ol-gabb
+19810,703.7,713.0,708.35,-10,-2,-1,0.090,92,140,206,40,150,6.61,12.88,47.46,-0.2,74,96,-1,1,-1,-1,1,,13,93,mixed: cu-sul-b gabb pegmt; troct; ol-gabb; and anorth
+19812,1246.0,1256.0,1251.0,-10,7,-1,0.321,340,352,168,340,1000,9.06,14.77,51.46,-0.2,91,200,-1,-1,1,1,-1,,38,75,cu-sul-b qtz-bio-plag-hbl-dior to hbl-mela-dior
+19813,1256.0,1266.0,1261.0,35,-2,4,0.134,186,360,222,120,760,9.56,16.34,51.35,-0.2,93,146,-1,-1,-1,1,-1,4,37,72,cu-sul-b qtz-bio-plag-hbl-dior to hbl-mela-dior
+19814,1266.0,1269.5,1267.75,-10,5,-1,0.247,230,349,127,40,690,10.83,17.13,50.68,-0.2,90,158,-1,-1,-1,-1,-1,,26,115,cu-sul-b qtz-bio-plag-hbl-dior to hbl-mela-dior
