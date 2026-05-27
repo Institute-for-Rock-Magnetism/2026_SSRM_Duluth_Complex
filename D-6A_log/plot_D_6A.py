@@ -25,11 +25,13 @@ EOH_FT = 2125.0  # End of hole — set y-axis limits to this
 # FORMATION column (after Severson 1993 Plate III, "South Stratigraphic Line").
 UNIT_CAPTION = (
     "Stratigraphic units (after Severson 1993): "
-    "MAIN AGT = main augite troctolite; LOW AGT = lower augite troctolite; "
+    "MAIN AGT = main augite troctolite; "
     "UW = Updip Wedge (sulfide-bearing); U1/U2/U3 = Ultramafic One/Two/Three "
-    "(interbedded ultramafics + troctolites); BH-U / BH-L = Basal Heterogeneous "
-    "(upper/lower); PEG = Pegmatitic Unit of Foose; BAN = Bottom Augite "
-    "troctolite to Norite; GRAN = Giants Range granitic footwall."
+    "(interbedded ultramafics + troctolites); BH (u) = upper Basal Heterogeneous, "
+    "BH = thin basal interval just above BAN (u); PEG = Pegmatitic Unit of Foose; "
+    "BAN (u) / BAN (l) = Bottom "
+    "Augite troctolite to Norite, upper/lower (split by the U3 ultramafic unit; "
+    "per M. Severson 2026 sampling annotation); GRAN = Giants Range granitic footwall."
 )
 
 
@@ -61,6 +63,20 @@ def load_section(section_csv: Path, style_csv: Path):
         width_values=style_df["width"].values,
     )
     return section, style, section_df
+
+
+def load_magnetics_samples(samples_csv: Path) -> pd.DataFrame:
+    """Load magnetics sample footages from ../D-6A_sampling/D-6A_samples.csv.
+
+    Returns a DataFrame with a numeric `footage` column. Rows without a
+    footage value (the file has placeholder rows for not-yet-described samples)
+    are kept — only rows where footage fails to parse are dropped.
+    """
+    df = pd.read_csv(samples_csv)
+    df.columns = [c.strip() for c in df.columns]
+    df["footage"] = pd.to_numeric(df["footage"], errors="coerce")
+    df = df.dropna(subset=["footage"]).reset_index(drop=True)
+    return df
 
 
 def attach_geochem(section, geochem_csvs: dict[str, Path]):
@@ -103,17 +119,17 @@ def build_facies_legend(style, used_facies):
     facies_meanings = {
         "OVB":     "Overburden",
         "AT":      "AT — anorthositic troctolite",
-        "AAT":     "AAT — anorthositic augite troctolite",
+        "AAT":     "AAT — augite-bearing anorthositic troctolite",
         "AT_T":    "AT/T — anorth. troctolite to troctolite",
         "T":       "T — troctolite",
-        "T_ORT":   "T-ORT — troctolite with oxide",
+        "T_ORT":   "T-ORT — troctolite to olivine-rich troctolite",
         "T_NOR":   "T-NOR — troctolite to norite",
         "AGT_OG":  "AGT-OG — augite troct. to olivine gabbro",
         "AGT":     "AGT — augite troctolite",
-        "GA":      "GA — gabbro",
+        "GA":      "GA — gabbroic anorthosite",
         "MELAGAB": "MELAGAB — melagabbro",
-        "GA_A":    "GA-A — gabbroic anorthosite (altered)",
-        "ORT":     "ORT — olivine-rich (oxide) troctolite",
+        "GA_A":    "GA-A — altered gabbroic anorthosite",
+        "ORT":     "ORT — olivine-rich troctolite (40–50% ol)",
         "PIC":     "PIC — picrite (melatroctolite)",
         "FP":      "FP — feldspathic peridotite",
         "PER":     "PER — peridotite",
@@ -137,20 +153,45 @@ def build_facies_legend(style, used_facies):
     return handles
 
 
-def plot_figure(section, style, geochem_attrs, output_stem: Path):
-    """Build the multi-panel figure: section column + geochem panels + legend."""
+def plot_samples_panel(ax, samples_df, sharey_ax):
+    """Draw horizontal markers + footage labels at each magnetics-sample depth."""
+    ax.set_xlim(0, 1)
+    ax.sharey(sharey_ax)
+    for ft in samples_df["footage"]:
+        ax.hlines(ft, xmin=0.0, xmax=0.55, color="#c0392b", linewidth=1.0, alpha=0.9)
+        ax.text(0.62, ft, f"{ft:.0f}", ha="left", va="center",
+                fontsize=6, color="black")
+    ax.set_xticks([])
+    ax.tick_params(labelleft=False)
+    ax.set_title("Magnetics\nsamples", fontsize=9)
+    for spine in ("top", "right", "bottom"):
+        ax.spines[spine].set_visible(False)
+    ax.text(0.5, -0.015, f"n = {len(samples_df)}",
+            transform=ax.transAxes, ha="center", va="top",
+            fontsize=7, color="0.35")
+
+
+def plot_figure(section, style, geochem_attrs, output_stem: Path, samples_df=None):
+    """Build the multi-panel figure: section column + samples + geochem panels + legend."""
     n_geochem = len(geochem_attrs)
+    has_samples = samples_df is not None and len(samples_df) > 0
+    n_samples_col = 1 if has_samples else 0
     # Extra column for the legend.
-    n_panels = 1 + n_geochem + 1
-    width_ratios = [1.5] + [1.0] * n_geochem + [1.4]
+    n_panels = 1 + n_samples_col + n_geochem + 1
+    width_ratios = [1.5] + ([0.45] if has_samples else []) + [1.0] * n_geochem + [1.4]
     fig, axes = plt.subplots(
         1, n_panels,
-        figsize=(2.5 + 1.6 * n_geochem + 2.2, 13),
+        figsize=(2.5 + 0.55 * n_samples_col + 1.6 * n_geochem + 2.2, 13),
         gridspec_kw={"width_ratios": width_ratios, "wspace": 0.08},
     )
     ax_strat = axes[0]
     ax_legend = axes[-1]
-    ax_geochem = axes[1:-1]
+    if has_samples:
+        ax_samples = axes[1]
+        ax_geochem = axes[2:-1]
+    else:
+        ax_samples = None
+        ax_geochem = axes[1:-1]
 
     # Share y-axis between strat + geochem panels (but not the legend pane).
     for ax in ax_geochem:
@@ -169,6 +210,10 @@ def plot_figure(section, style, geochem_attrs, output_stem: Path):
     ax_strat.set_ylim(0, EOH_FT)
     ax_strat.set_ylabel("Depth from collar (ft)")
     ax_strat.set_title("Lithology", fontsize=10)
+
+    # Magnetics-samples panel (between strat and geochem).
+    if ax_samples is not None:
+        plot_samples_panel(ax_samples, samples_df, sharey_ax=ax_strat)
 
     # Geochem panels.
     for ax, (attr_name, label, log_x) in zip(ax_geochem, geochem_attrs):
@@ -192,7 +237,10 @@ def plot_figure(section, style, geochem_attrs, output_stem: Path):
         ax.tick_params(labelleft=False)
 
     # Make depth go down on the y-axis (drill core convention).
-    for ax in [ax_strat, *ax_geochem]:
+    axes_with_depth = [ax_strat, *ax_geochem]
+    if ax_samples is not None:
+        axes_with_depth.append(ax_samples)
+    for ax in axes_with_depth:
         ax.set_ylim(0, EOH_FT)
         ax.invert_yaxis()
 
@@ -271,6 +319,15 @@ def main():
     print(f"  {section.n_beds} beds, {section.total_thickness:.0f} ft total")
     print(f"  {section.n_unique_facies} unique facies")
 
+    # Magnetics-sample footages (sibling D-6A_sampling/ directory).
+    samples_csv = here.parent / "D-6A_sampling" / "D-6A_samples.csv"
+    if samples_csv.exists():
+        samples_df = load_magnetics_samples(samples_csv)
+        print(f"\nmagnetics samples: {len(samples_df)} footages from {samples_csv.name}")
+    else:
+        samples_df = None
+        print(f"\nmagnetics samples: {samples_csv} not found — skipping panel")
+
     # Wire up the Exxon 1979 geochem dataset only. (attribute_name, csv_filename, value_column).
     print("\ngeochem:")
     attach_geochem(section, {
@@ -286,7 +343,7 @@ def main():
         ("Co_ppm", "Co (ppm)", False),
     ]
 
-    plot_figure(section, style, panels, args.output)
+    plot_figure(section, style, panels, args.output, samples_df=samples_df)
 
     if args.show:
         plt.show()
