@@ -23,21 +23,21 @@ DEPTH_FROM_FT,DEPTH_TO_FT,THICKNESS,FACIES,FORMATION,GROUP,DESCRIPTION
 1396,1416,20,HET,U1,SKI,Heterogeneous mix of alternating AT+PIC (patches/lenses) 4>0% 1-6 in; 1-2% sulf (CP>>Po); DNR sampled; AT 1-2% CP>>Po @ 1402-1412
 1416,1445,29,AT,U1,SKI,AT-Homogeneous w/ weak porphyritic sauss + uralite (plag 72; olv R; pyrox 2-3); PIC/ORT 1429-1432; irreg PIC/ORT patches 1435-1445
 1445,1463,18,PIC,U1,SKI,Picrite (top 3 in grades to peridotite/dunite); abundant Cl drops; DNR sampled; grades into PIC abrupt @ 1461-1463
-1463,1528,65,AT,BH-U,SKI,AT (as @ 1416-1445); irreg PIC/ORT patches 1485-1490; PIC/ORT patch 1492; PIC-(F.P.) 1500-1506 mod/wk; mixed PIC/ORT bnds 1508-1516; basaltic hornfels 1516-1520 (DNR sampled across contacts); T-AT w/ veins 1520-1525; mixed w/ 70% pegmatoid 1525-1527.5
-1528,1545,17,AT,BH-U,SKI,AT-Homogeneous (downward homogeneous!)
-1545,1594,49,HET,BH-U,SKI,Alternating AT + ultramafics; ultras at: SERP PIC 1545-1546; SERP FELD PER 1551-1552; SERP F.P. 1557-1560; GA (SERP PIC-F.P.) @ 1565; 1 ft PIC 1575-1576; irreg ORT/PIC zones 1576-1579; PIC-F.P. 1592-1594; 0.5-1.0% sulf in AT
-1594,1605,11,AT,BH-U,SKI,AT (locally heterogeneous) w/ irreg ORT/PIC zones; 1-2% sulf
+1463,1528,65,AT,BH (u),SKI,AT (as @ 1416-1445); irreg PIC/ORT patches 1485-1490; PIC/ORT patch 1492; PIC-(F.P.) 1500-1506 mod/wk; mixed PIC/ORT bnds 1508-1516; basaltic hornfels 1516-1520 (DNR sampled across contacts); T-AT w/ veins 1520-1525; mixed w/ 70% pegmatoid 1525-1527.5
+1528,1545,17,AT,BH (u),SKI,AT-Homogeneous (downward homogeneous!)
+1545,1594,49,HET,BH (u),SKI,Alternating AT + ultramafics; ultras at: SERP PIC 1545-1546; SERP FELD PER 1551-1552; SERP F.P. 1557-1560; GA (SERP PIC-F.P.) @ 1565; 1 ft PIC 1575-1576; irreg ORT/PIC zones 1576-1579; PIC-F.P. 1592-1594; 0.5-1.0% sulf in AT
+1594,1605,11,AT,BH (u),SKI,AT (locally heterogeneous) w/ irreg ORT/PIC zones; 1-2% sulf
 1605,1675,70,AT,U2,SKI,AT-Homogeneous w/ regularly spaced (~3 ft) irreg ORT/PIC zones (<1 ft) (plag 75; olv 25; pyrox tr; sulf 1); PICRITE 1625-1632 (DNR sampled); T(ORT) HET 1632-1645.5; PIC (serp) 1646.5-1648.5; HET zone AT-T w/ common PIC bnds 1648.5-1659 (CORD HNFL @ 1648.5 2 in; @ 1653 2 in); PEGMATOID 1659-1669 (DNR sampled); PIC 1669-1675
 1675,1695,20,AT,U2,SKI,AT-Homogeneous (mod) w/ very widely spaced olivine-rich zones (ORT-PIC); CP(BN)>>Po; downward grading; 1-2% sulf
-1695,1725,30,AT_T,BH-L,SKI,AT/T-Homogeneous CP(BN)>>Po (downward grading); plag ~70; olv ~30; white grano 1708-1711; serp-slicked zone w/ minor white grano 1717-1719; T-homog 1717-1725 abrupt
-1725,1800,75,AGT_OG,LOW AGT,SKI,AGT-(OG?) HET CP+L PO; variable pyrox (Low AGT); 1731-1750 1/4 cores (DNR sampled) 2-4% sulf; CP(BN)>Po 1762-1771; CP(BN)=Po 1771-1800 0.5-1.5%
-1800,1817,17,AT,LOW AGT,SKI,AT-Homogeneous Po>CP (plag 70-75; olv 20-25; pyrox 5); 0.5% sulf; downward sharp
+1695,1725,30,AT_T,BH,SKI,AT/T-Homogeneous CP(BN)>>Po (downward grading); plag ~70; olv ~30; white grano 1708-1711; serp-slicked zone w/ minor white grano 1717-1719; T-homog 1717-1725 abrupt
+1725,1800,75,AGT_OG,BAN (u),SKI,AGT-(OG?) HET CP+L PO; variable pyrox (Low AGT); 1731-1750 1/4 cores (DNR sampled) 2-4% sulf; CP(BN)>Po 1762-1771; CP(BN)=Po 1771-1800 0.5-1.5%
+1800,1817,17,AT,BAN (u),SKI,AT-Homogeneous Po>CP (plag 70-75; olv 20-25; pyrox 5); 0.5% sulf; downward sharp
 1817,1872,55,PER,U3,SKI,Peridotite/Dunite-Homogeneous; relatively fine-grained (plag <15; pyrox >85); mixed w/ peg 1819-1826; abundant Cl drops 1832-1851; minor T -> AT -> PIC 1851-1855.5; FELD PER 1855.5-1861; TROCT 1861-1863; F.PER -> PER 1863-1872
-1872,1880,8,AT,BAN,SKI,AT-Homogeneous (plag 70; olv 25; pyrox 5); <0.5% sulf
-1880,1900,20,AGT,BAN,SKI,AGT-Homogeneous (plag 65; olv 30; pyrox 5); ORT -> SERP PIC @ 1885-1900
-1900,1907,7,T_ORT,BAN,SKI,T-ORT; mod homogeneous (plag 50-60; olv 40-50; pyrox v-5)
-1907,1973,66,T,BAN,SKI,T-Homogeneous (plag 60-65; olv R; pyrox v-5); 1% sulf; HET (PEC ~20%) 1915-1942; >80% oxides @ 1937.8-1938; 6 in microscopic white grano @ 1942; >70% oxides 1942.5-1949; troct 1949-1973; three 1.5 in zones w/ >60% oxides 1955-1956; >70% oxides 1959.5-1960.5 (DNR sampled multiple intervals)
-1973,2005,32,AGT,BAN,SKI,AGT-Homogeneous (plag 55; olv 30; pyrox 15); contains massive oxide zones (<1 in to 5 in) as rnd blobs to bnds 1974.5-1983; >80% oxides @ 1982-1983 (DNR thin section)
-2005,2018,13,T,BAN,SKI,Troct-mod het; 0.5% sulf; DNR thin section at base
-2018,2050,32,T_NOR,BAN,SKI,T-Homogeneous (may be noritic); fine-grained; downward sharp Cp-Bn+Po-rich zone (10%) in last 3 in; basal contact with granitic footwall
+1872,1880,8,AT,BAN (l),SKI,AT-Homogeneous (plag 70; olv 25; pyrox 5); <0.5% sulf
+1880,1900,20,AGT,BAN (l),SKI,AGT-Homogeneous (plag 65; olv 30; pyrox 5); ORT -> SERP PIC @ 1885-1900
+1900,1907,7,T_ORT,BAN (l),SKI,T-ORT; mod homogeneous (plag 50-60; olv 40-50; pyrox v-5)
+1907,1973,66,T,BAN (l),SKI,T-Homogeneous (plag 60-65; olv R; pyrox v-5); 1% sulf; HET (PEC ~20%) 1915-1942; >80% oxides @ 1937.8-1938; 6 in microscopic white grano @ 1942; >70% oxides 1942.5-1949; troct 1949-1973; three 1.5 in zones w/ >60% oxides 1955-1956; >70% oxides 1959.5-1960.5 (DNR sampled multiple intervals)
+1973,2005,32,AGT,BAN (l),SKI,AGT-Homogeneous (plag 55; olv 30; pyrox 15); contains massive oxide zones (<1 in to 5 in) as rnd blobs to bnds 1974.5-1983; >80% oxides @ 1982-1983 (DNR thin section)
+2005,2018,13,T,BAN (l),SKI,Troct-mod het; 0.5% sulf; DNR thin section at base
+2018,2050,32,T_NOR,BAN (l),SKI,T-Homogeneous (may be noritic); fine-grained; downward sharp Cp-Bn+Po-rich zone (10%) in last 3 in; basal contact with granitic footwall
 2050,2125,75,QMONZ,GRAN,FOOTWALL,Quartz Monzonite (Giants Range); thin homogeneous sample 2052-2059; coarse-grained porphyritic 2061-2110; w/ schist inclusions 2077-2083; med-grn @ 2083-2086 and 2094-2104; moderately grained granite 2110-2125 to EOH at 2125 ft
