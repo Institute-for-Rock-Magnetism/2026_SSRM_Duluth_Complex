@@ -110,6 +110,31 @@ def attach_geochem(section, geochem_csvs: dict[str, Path]):
         print(f"  attached {attr_name}: {mask.sum()} samples from {path.name}")
 
 
+def attach_susceptibility(section, csv_path: Path, attr_name: str = "susc"):
+    """Attach the KT10 magnetic-susceptibility down-core profile to the Section.
+
+    CSV columns: Depth (ft from collar), Susceptibility (10^-3 SI), Other notes.
+    Height = Depth (same top-down convention as the section). Points are sorted
+    by depth so the panel can draw a connecting line through the dense profile.
+    """
+    if not csv_path.exists():
+        print(f"  skipping {attr_name}: {csv_path.name} not found")
+        return
+    df = pd.read_csv(csv_path)
+    depth = pd.to_numeric(df["Depth"], errors="coerce")
+    susc = pd.to_numeric(df["Susceptibility (10^-3 SI)"], errors="coerce")
+    mask = depth.notna() & susc.notna() & (susc > 0)
+    if not mask.any():
+        print(f"  skipping {attr_name}: no valid values in {csv_path.name}")
+        return
+    d = depth[mask].values
+    s = susc[mask].values
+    order = d.argsort()
+    section.add_data_attribute(attr_name, d[order], s[order])
+    print(f"  attached {attr_name}: {mask.sum()} measurements from {csv_path.name} "
+          f"(depth {d.min():.0f}-{d.max():.0f} ft)")
+
+
 def build_facies_legend(style, used_facies):
     """Return matplotlib legend Patch handles for every facies present in the section.
 
@@ -215,8 +240,8 @@ def plot_figure(section, style, geochem_attrs, output_stem: Path, samples_df=Non
     if ax_samples is not None:
         plot_samples_panel(ax_samples, samples_df, sharey_ax=ax_strat)
 
-    # Geochem panels.
-    for ax, (attr_name, label, log_x) in zip(ax_geochem, geochem_attrs):
+    # Geochem / data panels. Panel tuple: (attr_name, label, log_x, kind).
+    for ax, (attr_name, label, log_x, kind) in zip(ax_geochem, geochem_attrs):
         if not hasattr(section, attr_name):
             ax.text(0.5, 0.5, f"no data\n({attr_name})", ha="center", va="center",
                     transform=ax.transAxes, fontsize=8, color="0.5")
@@ -224,8 +249,14 @@ def plot_figure(section, style, geochem_attrs, output_stem: Path, samples_df=Non
             ax.set_yticks([])
             continue
         data = getattr(section, attr_name)
-        ax.plot(data.values, data.height, "o", markersize=3,
-                color="C0", clip_on=False)
+        if kind == "points":
+            # Dense profile drawn as small unconnected dots (no implied
+            # continuity between discrete measurements).
+            ax.plot(data.values, data.height, ".", markersize=1.8,
+                    color="C4", clip_on=False, linestyle="none")
+        else:
+            ax.plot(data.values, data.height, "o", markersize=3,
+                    color="C0", clip_on=False)
         ax.set_xlabel(label)
         if log_x:
             ax.set_xscale("log")
@@ -336,11 +367,18 @@ def main():
         "Co_ppm": (here / "D_6A_geochem_exxon.csv", "Co_ppm"),
     })
 
-    # (attribute_name, x-axis label, log_x?)
+    # KT10 magnetic-susceptibility profile (sibling D-6A_data/ directory).
+    print("\nsusceptibility:")
+    susc_csv = (here.parent / "D-6A_data" / "susceptibility_KT10"
+                / "D-6A_KT10_susceptibility.csv")
+    attach_susceptibility(section, susc_csv)
+
+    # (attribute_name, x-axis label, log_x?, kind)
     panels = [
-        ("Cu_pct", "Cu (wt%)", True),
-        ("Ni_ppm", "Ni (ppm)", True),
-        ("Co_ppm", "Co (ppm)", False),
+        ("Cu_pct", "Cu (wt%)", True, "markers"),
+        ("Ni_ppm", "Ni (ppm)", True, "markers"),
+        ("Co_ppm", "Co (ppm)", False, "markers"),
+        ("susc", "Mag. susc.\n(10$^{-3}$ SI)", True, "points"),
     ]
 
     plot_figure(section, style, panels, args.output, samples_df=samples_df)
