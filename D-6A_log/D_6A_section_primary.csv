@@ -4,7 +4,9 @@ DEPTH_FROM_FT,DEPTH_TO_FT,THICKNESS,FACIES,FORMATION,GROUP,DESCRIPTION
 189,203,14,PEG,MAIN AGT,SKI,Pegmatite zone (DNR sampled); sauss-uralite gabbro-anorthosite (GA-A) 189-194; pegmatitic plag-cpx-ox-ol 194-196; AGT 196-197; wk-mod sauss-ural plag-ol-cpx-ox 197-203
 203,218,15,AT,MAIN AGT,SKI,AT-Homogeneous; downward grading
 218,265,47,AAT,MAIN AGT,SKI,AAT (AGT)-Homogeneous; downward grading
-265,623,358,AGT,MAIN AGT,SKI,AGT-Homogeneous; grades into plag-rich AGT @ 327-353; mixed with 40-80% red rock granophyre 353-363 (cut by slicked ch-ural veins); vuggy red rock granophyre 363-417 (DNR sampled 363-393; hem-stained); various granophyre/uralitization sub-intervals through 455; hot zones 516-526; ORT 527-528 (sharp); olivine-rich variants below
+265,353,88,AGT,MAIN AGT,SKI,AGT-Homogeneous; grades into plag-rich AGT @ 327-353
+353,430,77,GRANO,MAIN AGT,SKI,Red rock granophyre zone: 353-363 mixed AGT + 40-80% granophyre (cut by slicked ch-ural veins); 363-417 vuggy red rock granophyre (DNR sampled 363-393); 417-430 vuggy uralitized pyrox-feld granophyre + hem-stained
+430,623,193,AGT,MAIN AGT,SKI,AGT-Homogeneous with +10% coarse intercumulus CPX through 455; hot zones 516-526; ORT 527-528 (sharp); olivine-rich variants below
 623,652,29,AAT,MAIN AGT,SKI,AAT-Homogeneous; downward grading; oikocrysts of olv+cpx (poikilitic intercumulus 50% pore space 1-3mm)
 652,665,13,GRANO,MAIN AGT,SKI,Vuggy granophyre (red rock; very light); red rock 652-659; ural-ch-white feld 659-665
 665,669,4,GA,MAIN AGT,SKI,GA-HET hem-coated pyrox
