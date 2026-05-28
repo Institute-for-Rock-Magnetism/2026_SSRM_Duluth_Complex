@@ -1,59 +1,44 @@
-footage, sample type, Severson unit, Severson description, rock type, sulfide (%), our description, 
-2123, full core core, GRB, MED. GRN GRANITE, quartz monzonite, 0, equigranular 1 mm granite
-2105, half core core, GRB, MED. GRN GRANITE, quartz monzonite, 0, equigranular 1 mm granite
-2095, full core core, GRB, CS GRN PORPYRITIC, quartz monzonite, 0, porphyritic granite with 3 mm ground mass with plag phenos up to 1 cm
-2076, full core core, GRB, CS GRN PORPYRITIC, quartz monzonite, 0, porphyritic granite with plag phenos up to 3 cm that are aligned in tilted foliation
-2046, half core core, GRB, MED. GRN GRANITE,  quartz monzonite, 0, 0.5 cm grain size with subhorizontal igneous foliation 
-2031, quarter core, GRB, Homog. (Noritic) CP-BN+Po-rich zone (10%), quartz monzonite, 3, quartz monzonite 0.7 to 1 mm grain quartz monozonite footwall with abundant sulfides (bright brassy chalcopyrite?). We consider this to be GRB rather than assimilated GRB.
-2022, quarter core, BAN (l), Troctolite (crossed-out) Homog. (Noritic), troctolite, 1, 0.3 to 0.5 cm troctolite (preferring Severson's initial call of troctolite over norite)
-2009, quarter core, BAN (l), TROCT (MOD HET), augite troctolite, 3, 0.3 cm augite troctolite sulfides up to 0.5 cm
-2001, quarter core, BAN (l), AGT-HOMOG., augite troctolite, 1, 0.3 to 0.5 cm with sulfides up to 0.4 cm
-1989, quarter core, BAN (l), AGT-HOMOG., augite troctolite, 7, 0.3 to 0.5 cm with sulfides
-1926, quarter core, BAN (l), T-HOMOG, augite troctolite, 3, 0.3 to 0.5 cm with sulfide up to 1 cm sulfides include the peacock colored bornite
-1913, quarter core, BAN (l), T-HOMOG, troctolite, 5, 0.3 to 0.5 cm with sulfides up to 0.5 
-1899, quarter core, U3, ORT, olivine-rich troctolite, 0, 0.2 cm with plag laths up to 2 cm with igneous foliation
-1888, quarter core, U3, AGT, augite troctolite, 0, 0.3 to 0.5 cm grain size; on the box Mark has this grouped as U3 but seems more natural fit in the BAN (which is what he has labeled on box)
-1880, quarter core, U3, AGT, augite troctolite, 0, 0.3 to 0.5 cm grain size; on the box Mark has this grouped as U3 but seems more natural fit in the BAN (which is what he has labeled on box)
-1868, quarter core, U3, PER, peridotite, 0, fine-grained and more green than other peridotites in this interval
-1861, quarter core, U3, FELD PER, feldspathic peridotite, 0, 0.5 to 1 mm dark grey with vein of green serpentinization
-1857, quarter core, U3, FELD PER, feldspathic peridotite, 2, 0.5 to 1 mm turqoise blue blebs of secondary Cu alteration possibly atacamite-group associated with Cl-rich alteration; likely after Cu sulfides
-1849, quarter core, U3, PERIDOTITE ABUND. CL DROPS!!!, peridotite, 0, 0.25 mm grain size with rust-colored wet alteration spots/droplets on cut core surface; interpreted as Fe-hydroxychloride alteration possibly hibbingite-related associated with Cl-rich fluids; chalky white alteration blebs
-1845, quarter core, U3, PERIDOTITE ABUND. CL DROPS!!!, peridotite, 0, 0.25 mm grain size with rust-colored wet alteration spots/droplets on cut core surface; interpreted as Fe-hydroxychloride alteration possibly hibbingite-related associated with Cl-rich fluids; chalky white alteration blebs
-1833, quarter core, U3, PERIDOTITE ABUND. CL DROPS!!!, peridotite, 2, 0.25 mm grain size with rust-colored wet alteration spots/droplets on cut core surface; interpreted as Fe-hydroxychloride alteration possibly hibbingite-related associated with Cl-rich fluids; chalky white alteration blebs
-1822, quarter core, U3, PERIDOTITE, peridotite, 1, 0.5 mm grain size with no more rust-colored alteration
-1806, quarter core, BAN (u), AT HOMG., anorthositic troctolite, 0, 0.2 to 0.5 cm grain size
-1789, quarter core, BAN (u), AGT (CP(BN)=Po), augite troctolite, 0, 0.3 to 0.5 cm grain size 
-1779, quarter core, BAN (u), AGT (CP(BN)=Po), augute troctolite, 3, 0.3 to 0.5 cm grain sie with sulfides up to 0.4 cm in size
-1762, quarter core, BAN (u), AGT (CP(BN)>Po), augite troctolite, 3, 0.3 to 0.7 cm grain size with sulfides up to 0.4 cm in sie and a 1.5 cm mafic xenolith
-1727, quarter core, BAN (u), AGT-(OG?) HET, augute troctolite, 5, 0.3 to 0.5 cm grain size with a large patch of sulfides (4 to 5 cm)
-1699, quarter core, BH (l), AT/T-HOMOG, anorthositic troctolite, 1, 0.3 to 0.7 cm grain size with very little sulfides
-1605,
-1592,
-1581,
-1566, 
-1561,
-1551,
-1528,
-1509,
-1504,
-1500,
-1465,
-1464,
-1463,
-1461,
-1446,
-1342,
-1338,
-1322,
-1301,
-1286,
-1264
-1249,
-1236,
-1215,
-1196,
-1171,
-1140,
-1110,
-1108,
-1089,
+sample name, footage, sample type, Severson unit, Severson description, rock type, sulfide (%), our description,
+D6A-2123, 2123, full core core, GRB, MED. GRN GRANITE, quartz monzonite, 0, equigranular 1 mm granite,
+D6A-2105, 2105, half core core, GRB, MED. GRN GRANITE, quartz monzonite, 0, equigranular 1 mm granite,
+D6A-2095, 2095, full core core, GRB, CS GRN PORPYRITIC, quartz monzonite, 0, porphyritic granite with 3 mm ground mass with plag phenos up to 1 cm,
+D6A-2076, 2076, full core core, GRB, CS GRN PORPYRITIC, quartz monzonite, 0, porphyritic granite with plag phenos up to 3 cm that are aligned in tilted foliation,
+D6A-2046, 2046, half core core, GRB, MED. GRN GRANITE,  quartz monzonite, 0, 0.5 cm grain size with subhorizontal igneous foliation,
+D6A-2031, 2031, quarter core, GRB, Homog. (Noritic) CP-BN+Po-rich zone (10%), quartz monzonite, 3, quartz monzonite 0.7 to 1 mm grain quartz monozonite footwall with abundant sulfides (bright brassy chalcopyrite?). We consider this to be GRB rather than assimilated GRB.,
+D6A-2022, 2022, quarter core, BAN (l), Troctolite (crossed-out) Homog. (Noritic), troctolite, 1, 0.3 to 0.5 cm troctolite (preferring Severson's initial call of troctolite over norite),
+D6A-2009, 2009, quarter core, BAN (l), TROCT (MOD HET), augite troctolite, 3, 0.3 cm augite troctolite sulfides up to 0.5 cm,
+D6A-2001, 2001, quarter core, BAN (l), AGT-HOMOG., augite troctolite, 1, 0.3 to 0.5 cm with sulfides up to 0.4 cm,
+D6A-1989, 1989, quarter core, BAN (l), AGT-HOMOG., augite troctolite, 7, 0.3 to 0.5 cm with sulfides,
+D6A-1926, 1926, quarter core, BAN (l), T-HOMOG, augite troctolite, 3, 0.3 to 0.5 cm with sulfide up to 1 cm sulfides include the peacock colored bornite,
+D6A-1913, 1913, quarter core, BAN (l), T-HOMOG, troctolite, 5, 0.3 to 0.5 cm with sulfides up to 0.5,
+D6A-1899, 1899, quarter core, U3, ORT, olivine-rich troctolite, 0, 0.2 cm with plag laths up to 2 cm with igneous foliation,
+D6A-1888, 1888, quarter core, U3, AGT, augite troctolite, 0, 0.3 to 0.5 cm grain size; on the box Mark has this grouped as U3 but seems more natural fit in the BAN (which is what he has labeled on box),
+D6A-1880, 1880, quarter core, U3, AGT, augite troctolite, 0, 0.3 to 0.5 cm grain size; on the box Mark has this grouped as U3 but seems more natural fit in the BAN (which is what he has labeled on box),
+D6A-1868, 1868, quarter core, U3, PER, peridotite, 0, fine-grained and more green than other peridotites in this interval,
+D6A-1861, 1861, quarter core, U3, FELD PER, feldspathic peridotite, 0, 0.5 to 1 mm dark grey with vein of green serpentinization,
+D6A-1857, 1857, quarter core, U3, FELD PER, feldspathic peridotite, 2, 0.5 to 1 mm turqoise blue blebs of secondary Cu alteration possibly atacamite-group associated with Cl-rich alteration; likely after Cu sulfides,
+D6A-1849, 1849, quarter core, U3, PERIDOTITE ABUND. CL DROPS!!!, peridotite, 0, 0.25 mm grain size with rust-colored wet alteration spots/droplets on cut core surface; interpreted as Fe-hydroxychloride alteration possibly hibbingite-related associated with Cl-rich fluids; chalky white alteration blebs,
+D6A-1845, 1845, quarter core, U3, PERIDOTITE ABUND. CL DROPS!!!, peridotite, 0, 0.25 mm grain size with rust-colored wet alteration spots/droplets on cut core surface; interpreted as Fe-hydroxychloride alteration possibly hibbingite-related associated with Cl-rich fluids; chalky white alteration blebs,
+D6A-1833, 1833, quarter core, U3, PERIDOTITE ABUND. CL DROPS!!!, peridotite, 2, 0.25 mm grain size with rust-colored wet alteration spots/droplets on cut core surface; interpreted as Fe-hydroxychloride alteration possibly hibbingite-related associated with Cl-rich fluids; chalky white alteration blebs,
+D6A-1822, 1822, quarter core, U3, PERIDOTITE, peridotite, 1, 0.5 mm grain size with no more rust-colored alteration,
+D6A-1806, 1806, quarter core, BAN (u), AT HOMG., anorthositic troctolite, 0, 0.2 to 0.5 cm grain size,
+D6A-1789, 1789, quarter core, BAN (u), AGT (CP(BN)=Po), augite troctolite, 0, 0.3 to 0.5 cm grain size,
+D6A-1779, 1779, quarter core, BAN (u), AGT (CP(BN)=Po), augute troctolite, 3, 0.3 to 0.5 cm grain sie with sulfides up to 0.4 cm in size,
+D6A-1762, 1762, quarter core, BAN (u), AGT (CP(BN)>Po), augite troctolite, 3, 0.3 to 0.7 cm grain size with sulfides up to 0.4 cm in sie and a 1.5 cm mafic xenolith,
+D6A-1727, 1727, quarter core, BAN (u), AGT-(OG?) HET, augute troctolite, 5, 0.3 to 0.5 cm grain size with a large patch of sulfides (4 to 5 cm),
+D6A-1699, 1699, quarter core, BH (l), AT/T-HOMOG, anorthositic troctolite, 1, 0.3 to 0.7 cm grain size with very little sulfides,
+D6A-1605, 1605, quarter core, U2, AT-HOMOG, anorthositic troctolite, 0.5, 0.2 to 0.5 cm grain size,
+D6A-1592, 1592, quarter core, BH (u), PIC-F.P., anorthositic troctolite, 0, 0.5 to 1 cm grain size and appears more like the aT unit than picrite,
+D6A-1581, 1581, quarter core, BH (u), AT, anorthositic troctolite, 0, 1 to 1.4 mm grain size,
+D6A-1566, 1566, quarter core, BH (u), Pic-F.P. lens , picrite, 0, 0.5 to 0.7 mm grain size,
+D6A-1561, 1561, quarter core, BH (u), AT, anorthositic troctolite, 1, 0.2 to 0.5 cm grain size,
+D6A-1551, 1551, quarter core, BH (u), SERP F.P., picrite, 1, 0.7 to 1 mm grain size,
+D6A-1528, 1528, quarter core, BH (u), AT-HOMOG, anorthositic troctolite, 0, 0.3 to 0.5 cm grain size,
+D6A-1509, 1509, quarter core, BH (u), HET (PIC/ORT bnds) this in in ORT, anorthositic troctolite, 1, 0.5 to 1 cm grain size,
+D6A-1504, 1504, quarter core, BH (u), PIC-(F.P.), picrite, 1, 0.2 cm grain size,
+D6A-1500, 1500, quarter core, BH (u), PIC-(F.P.), picrite, 2, 0.2 cm grain size,
+D6A-1465, 1465.5, quarter core, BH (u), AT, ,,,
+D6A-1464, 1464, quarter core, BH (u), AT, anorthositic troctolite, 0, 1 to 2 mm grain size,
+D6A-1463, 1462.75, quarter core, U1, PIC (at BH (u) contact; abund. Cl drops), picrite, 1 mm grain size,,
+D6A-1461, 1461, quarter core, U1, PIC (abund. Cl drops),,,,
+D6A-1446, 1446, quarter core, U1, PIC (top 3 in grades to peridotite/dunite; abund. Cl drops),,,,
