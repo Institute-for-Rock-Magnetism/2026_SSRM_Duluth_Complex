@@ -40,7 +40,7 @@ Palette designed so related facies have related colors:
 - **Anorthositic-troctolitic** family (AT, AAT, AT_T, T): light teal → green gradient as plagioclase decreases and olivine increases
 - **Augite-troctolitic / gabbroic** family (AGT_OG, AGT, GA, MELAGAB): olive-green darkening with increasing cpx
 - **Ultramafic** family (PIC, FP, PER, DUN): increasingly dark green (DUN nearly black) as plag drops below 20%
-- **Oxide-rich** (ORT, T_ORT): purple-tinted to flag Fe-Ti oxide content
+- **Olivine-rich troctolite** (ORT, T_ORT): muted dark green between T and PIC, reflecting the 40–50% olivine mode (sits between troctolite and picrite in the ultramafic transition)
 - **Felsic intrusives** (PEG, GRANO, QMONZ, GA_A): pink/salmon family
 - **Metamorphic/xenolith** (HNFL, HBLD): dark gray-green
 - **Overburden / heterogeneous mixed** (OVB, HET): tan / neutral gray
@@ -133,6 +133,7 @@ for ax in axes:
 - **Section CSVs (`primary` / `detailed`)**: lithology codes, depths, and stratigraphic-unit labels transcribed from the legible hand-written 1992 log. Mineral mode percentages and sub-interval depths within DESCRIPTION should be verified against the PDF for any depth where you'll cite numbers.
 - **Exxon 1979 assays**: 101 samples, full hole coverage. Numbers read from a typed table with reasonable legibility; minor cells (Au, Ag) may have OCR/read ambiguities. The dataset stores both `_pct` and `_ppm` forms of Cu and Ni, with `_ppm = _pct × 10000` consistency verified.
 - **DNR 255-1 PGE table**: 7 D-6A rows are partial — full D-6A suite is ~25 samples. The bound back-pages also include the Table III chemistry (CSL 16683–17159 series, depths ~1927–1989 ft in the BAN unit) which is **not yet extracted** here; pull from the DNR GIS package above if those depths are critical.
+  - **Sampling caveat (M. Severson, pers. comm.)**: *"Note that many of the Dahlberg geochemistry samples were collected across contacts (often very divergent rock types) so beware of whole rock values."* Cross-check each sample's `DEPTH_FROM_FT`–`DEPTH_TO_FT` against the section file before interpreting whole-rock concentrations as representative of a single facies.
 - **ICP-MS / XRF thin-section data**: 9 D-6A rows, mostly transcribed from hand-annotated multi-page sheets where the column headers and sample labels are written in pencil. Values flagged as best-effort reads. Cross-check against the original report before scientific use.
 
 ## Acronym key (FACIES values)
@@ -141,21 +142,21 @@ for ax in axes:
 |---|---|
 | OVB | Overburden / glacial cover |
 | AT | Anorthositic troctolite (75/80–95% plag) |
-| AAT | Anorthositic augite troctolite |
+| AAT | Augite-bearing anorthositic troctolite |
 | AGT | Augite troctolite |
 | AGT_OG | Augite troctolite to olivine gabbro transition |
 | T | Troctolite |
-| T_ORT | Troctolite with oxide-rich character |
+| T_ORT | Troctolite to olivine-rich troctolite (transitional, 30–40% olivine) |
 | T_NOR | Troctolite to norite |
 | AT_T | Anorthositic troctolite to troctolite (transitional) |
 | PIC | Picrite (= melatroctolite per Miller et al. 2002) |
 | FP | Feldspathic peridotite (10–30% plag) |
 | PER | Peridotite (<10% plag) |
 | DUN | Dunite |
-| ORT | Oxide-rich troctolite |
-| GA | Gabbro |
+| ORT | Olivine-rich troctolite (40–50% olivine) |
+| GA | Gabbroic anorthosite |
 | MELAGAB | Melagabbro (30–50/55% plag) |
-| GA_A | Gabbroic anorthosite — altered (Severson pre-2000 shorthand) |
+| GA_A | Altered gabbroic anorthosite (saussuritized / uralitized) |
 | PEG | Pegmatite / pegmatoidal |
 | GRANO | Granophyre |
 | QMONZ | Quartz monzonite (Giants Range footwall) |
