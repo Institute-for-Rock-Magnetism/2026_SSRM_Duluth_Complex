@@ -11,7 +11,9 @@ DEPTH_FROM_FT,DEPTH_TO_FT,THICKNESS,FACIES,FORMATION,GROUP,DESCRIPTION
 669,672,3,MELAGAB,MAIN AGT,SKI,Melagabbro; sauss-uralized
 672,965,293,AGT,MAIN AGT,SKI,AGT(AAT)-HET; AAT with sauss zones (DNR sampled @ 681-691); AGT with ORT patches + 20% PEG plag-cpx-alpha @ 708-713; homog 713-752; ORT 752-753 abrupt; T 754-807; AT 807-811; HET (T)(ORT)(AT)(AAT) 830-906 abrupt
 965,1034,69,AT,MAIN AGT,SKI,Anorthositic troctolite homogeneous with fluxion ~65-70 deg; ORT patches with AGT (abrupt contacts) @ 998-1000; downward grading over 1 ft (plag 70-75; olv 20-25; pyrox 5-10/15)
-1034,1297,263,AGT,MAIN AGT,SKI,AGT-Homogeneous (plag 65; olv 20-25; pyrox 10>5); olivine-rich AGT 1078-1098; Troct 1099-1120; less cpx 1120-1145; OUI hornblendite + granophyric + uralitized pyrox 1246-1266.5 (sharp contacts; DNR sampled); grades into Troct 1280-1297
+1034,1246,212,AGT,MAIN AGT,SKI,AGT-Homogeneous (plag 65; olv 20-25; pyrox 10>5); olivine-rich AGT 1078-1098; Troct 1099-1120; less cpx 1120-1145
+1246,1266.5,20.5,HBLD,MAIN AGT,SKI,OUI hornblendite + granophyric + uralitized pyrox; sharp contacts; serp AGT w/ slicked fractures for 1-2 ft at both contacts; intercum hbl 5-15; oikos 30-70; off-stringer 10-30; qtz 2-3; K-spar 1-3 (DNR sampled); HNBL emplaced after AGT was serp/slicked (structural control)
+1266.5,1297,30.5,AGT,MAIN AGT,SKI,AGT; grades into Troct 1280-1297
 1297,1306,9,T,U1,SKI,T w/ ORT/PIC bnds/patches at 1297 (3 in); 1299 (5 in); 1300-1302; 1305-1306 (5 in to 1 ft)
 1306,1310,4,AT,U1,SKI,AT
 1310,1317,7,T,U1,SKI,T w/ patches of ORT/Pic
