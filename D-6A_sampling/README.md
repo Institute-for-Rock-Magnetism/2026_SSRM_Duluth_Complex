@@ -51,6 +51,21 @@ The core is arranged as follows (this example is box no. 185, which goes from 18
 
 Photos were taken of each sample with up being down core, with the sample card to the left of the sample (i.e. higher in the core).
 
+## Sample prep plans
+
+Specimens are being prepared from the collected D6A samples by Marcus Lorenzen. They are being prepared for 5 IRM Summer School Groups: 
+- Group AGT
+- Group Ultramafic (1 and 3)
+- Group BAN (Bottom Augite troctolite to Norite)
+- Group Heterogenous (basal heterogenous unit)
+- Group Felsic (GRB + Granophyre + DG6a-420 *oxidized augite troctolite*)
+
+specimen *a* (prepped for every sample): specimen prepared for SRM remanence analysis. For cores drilled from core with pmag drill, "full core core" in "D-6A_sampling/D-6A_samples.csv", the specimen core axis lab arrow is horizontal. For specimens cut from the quarter core, the arrows indicate up (towards the surface).
+
+specimen *b* (prepped for every sample): chip for rock magnetism put into capsule for VSM and MPMS experiments. For coarsely crystalline samples, the dominant mineralogy is noted and multiple rockmag specimens may be preped (*c*, *d*).
+
+specimen *t*: polished thick section prepared for SEM analysis and QDM analysis. 3 prepared for Group AGT, Group BAN, and Group Felsic. 4 prepared for Group Heterogenous (2 anorthositic, 2 ultramafic) and 4 prepared for Group Ultramafic (2 U1, 2 U3)
+
 ## Additional notes
 
 Notes made while looking at core on May 27–28, 2026:
