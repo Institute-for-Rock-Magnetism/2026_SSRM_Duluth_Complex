@@ -32,8 +32,8 @@ project:
     - file: duluth_complex_background.md
     - title: The Severson 1992 log
       children:
-        - file: D-6A_log/severson_log.md
         - file: D-6A_log/D_6A_stratigraphic_column.ipynb
+        - file: D-6A_log/data_dictionary.md
         - file: D-6A_log/D_6A_log_codes.md
     - title: Core work, May 2026
       children:

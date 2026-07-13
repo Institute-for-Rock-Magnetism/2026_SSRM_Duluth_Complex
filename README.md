@@ -67,6 +67,6 @@ The core was examined and sampled at the Minnesota DNR Drill Core Library in Hib
 | Path | Contents |
 |---|---|
 | [duluth_complex_background.md](duluth_complex_background.md) | Geologic background on the Midcontinent Rift, the Duluth Complex, and the South Kawishiwi intrusion |
-| [D-6A_log/](D-6A_log/severson_log.md) | Mark Severson's 1992 log and derived products: pystrat-ready stratigraphic section CSVs, a facies style palette, transcribed geochemistry datasets, an [acronym/unit-code glossary](D-6A_log/D_6A_log_codes.md), the plotting script, and a [notebook that renders the stratigraphic column](D-6A_log/D_6A_stratigraphic_column.ipynb) |
+| [D-6A_log/](D-6A_log/D_6A_stratigraphic_column.ipynb) | Mark Severson's 1992 log and derived products: pystrat-ready stratigraphic section CSVs, a facies style palette, transcribed geochemistry datasets, the plotting script, and a [notebook that renders the stratigraphic column](D-6A_log/D_6A_stratigraphic_column.ipynb). The file schemas and data conventions are set out in the [data dictionary](D-6A_log/data_dictionary.md), and the codes themselves in the [acronym glossary](D-6A_log/D_6A_log_codes.md) |
 | [D-6A_sampling/](D-6A_sampling/sampling.md) | The hole itself, the May 2026 core examination and sampling, the sample table, core-box layout and photo conventions, and specimen preparation plans |
 | [D-6A_data/](D-6A_data/measured_data.md) | Measured data collected from the core, including the [KT-10 magnetic susceptibility measurements](D-6A_data/measured_data.md) |

@@ -1,6 +1,6 @@
 # D-6A measured data
 
-Data measured on drill core D-6A at the Minnesota DNR Drill Core Library and at the Institute for Rock Magnetism. Depths are given as depth from collar in feet so that they can be cross-referenced against the stratigraphic section in [`../D-6A_log/`](../D-6A_log/severson_log.md) and the sample table in [`../D-6A_sampling/`](../D-6A_sampling/sampling.md).
+Data measured on drill core D-6A at the Minnesota DNR Drill Core Library and at the Institute for Rock Magnetism. Depths are given as depth from collar in feet so that they can be cross-referenced against the [stratigraphic section](../D-6A_log/D_6A_stratigraphic_column.ipynb) and the [sample table](../D-6A_sampling/sampling.md).
 
 ## Magnetic susceptibility (`susceptibility_KT10/`)
 

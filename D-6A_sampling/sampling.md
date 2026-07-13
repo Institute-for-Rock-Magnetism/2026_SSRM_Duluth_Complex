@@ -1,6 +1,6 @@
 # Core examination and sampling
 
-Documentation of drill hole D-6A itself, of the May 26–28, 2026 core examination at the Minnesota DNR Drill Core Library, and of the material collected. Samples are keyed by footage (depth from collar) so they can be cross-referenced against the stratigraphic section and geochemistry in [`../D-6A_log/`](../D-6A_log/severson_log.md).
+Documentation of drill hole D-6A itself, of the May 26–28, 2026 core examination at the Minnesota DNR Drill Core Library, and of the material collected. Samples are keyed by footage (depth from collar) so they can be cross-referenced against the [stratigraphic section](../D-6A_log/D_6A_stratigraphic_column.ipynb) and the geochemistry archived alongside it.
 
 ## The D-6A drill hole
 
@@ -8,7 +8,7 @@ D-6A (DNRNUM 13933) is an exploration hole in the Dunka Pit area of the South Ka
 
 The Severson log lists a collar elevation of 1521 ft; the DNR dataset gives 1517 ft. The same DNR dataset records the hole as vertical (dip −90°, azimuth 360°), drilled by diamond coring for exploration; this is the as-collared orientation rather than a downhole deviation survey.
 
-The hole penetrates the South Kawishiwi Troctolitic Series — a layered sequence of anorthositic troctolite, augite troctolite, and ultramafic units — and bottoms in the Archean Giants Range Batholith footwall. It was logged by Mark Severson (NRRI) in 1992 as part of a major effort studying the layered series of the Duluth Complex. Geochemical datasets developed from the core are archived in [`../D-6A_log/`](../D-6A_log/severson_log.md), and the geologic context of the intrusion is described in the [geologic background](../duluth_complex_background.md).
+The hole penetrates the South Kawishiwi Troctolitic Series — a layered sequence of anorthositic troctolite, augite troctolite, and ultramafic units — and bottoms in the Archean Giants Range Batholith footwall. It was logged by Mark Severson (NRRI) in 1992 as part of a major effort studying the layered series of the Duluth Complex. Geochemical datasets developed from the core are archived alongside the [stratigraphic section](../D-6A_log/D_6A_stratigraphic_column.ipynb), and the geologic context of the intrusion is described in the [geologic background](../duluth_complex_background.md).
 
 ## The May 2026 core examination
 
