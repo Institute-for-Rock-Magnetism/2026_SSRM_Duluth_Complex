@@ -1,0 +1,50 @@
+version: 1
+
+project:
+  id: ssrm-duluth-complex-2026
+  title: The D-6A Drill Core
+  description: >
+    Materials from the 2026 IRM Summer School of Rock Magnetism project on drill
+    core D-6A from the South Kawishiwi intrusion of the Duluth Complex.
+  keywords:
+    - Duluth Complex
+    - South Kawishiwi intrusion
+    - rock magnetism
+    - drill core
+    - magnetic susceptibility
+  license:
+    content: CC-BY-4.0
+  github: Institute-for-Rock-Magnetism/2026_SSRM_Duluth_Complex
+  subject: Rock Magnetism
+
+  # Files that are linked from the pages but are not pages themselves (data
+  # tables, the scanned log, figures) are copied into the built site so the
+  # links resolve as downloads.
+  error_rules:
+    - rule: link-resolves
+      severity: warn
+
+  bibliography:
+    - references.bib
+
+  toc:
+    - file: README.md
+    - file: duluth_complex_background.md
+    - title: The Severson 1992 log
+      children:
+        - file: D-6A_log/severson_log.md
+        - file: D-6A_log/D_6A_stratigraphic_column.ipynb
+        - file: D-6A_log/D_6A_log_codes.md
+    - title: Core work, May 2026
+      children:
+        - file: D-6A_sampling/sampling.md
+        - file: D-6A_data/measured_data.md
+
+site:
+  template: book-theme
+  title: D-6A Drill Core — IRM Summer School 2026
+  options:
+    logo_text: D-6A Drill Core — IRM Summer School 2026
+    lang: en
+    hide_toc: false
+    numbered_references: false

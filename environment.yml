@@ -1,0 +1,16 @@
+name: duluth-book
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - pandas
+  - matplotlib
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - nodejs>=20
+  - pip
+  - pip:
+    - pystrat
+    - jupyter-book>=2.0
