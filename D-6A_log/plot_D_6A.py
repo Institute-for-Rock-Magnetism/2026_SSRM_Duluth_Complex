@@ -29,8 +29,8 @@ UNIT_CAPTION = (
     "UW = Updip Wedge (sulfide-bearing); U1/U2/U3 = Ultramafic One/Two/Three "
     "(interbedded ultramafics + troctolites); BH (u) = upper Basal Heterogeneous, "
     "BH = thin basal interval just above BAN (u); PEG = Pegmatitic Unit of Foose; "
-    "BAN (u) / BAN (l) = Bottom "
-    "Augite troctolite to Norite, upper/lower (split by the U3 ultramafic unit; "
+    "BAN (u) / BAN (l) = Basal "
+    "Augite Troctolite and Norite, upper/lower (split by the U3 ultramafic unit; "
     "per M. Severson 2026 sampling annotation); GRAN = Giants Range granitic footwall."
 )
 
@@ -135,45 +135,45 @@ def attach_susceptibility(section, csv_path: Path, attr_name: str = "susc"):
           f"(depth {d.min():.0f}-{d.max():.0f} ft)")
 
 
+FACIES_NAMES_CSV = Path(__file__).resolve().parent / "D_6A_facies_names.csv"
+
+
+def load_facies_names(csv_path=FACIES_NAMES_CSV):
+    """Map each facies code to its full rock name.
+
+    The mapping lives in D_6A_facies_names.csv so that the figure legend, the
+    notebook tables, and any other consumer resolve codes the same way.
+
+    Args:
+        csv_path (Path): CSV with `facies` and `name` columns.
+
+    Returns:
+        dict: {facies_code: full_name}
+    """
+    names_df = pd.read_csv(csv_path)
+    return dict(zip(names_df["facies"], names_df["name"]))
+
+
 def build_facies_legend(style, used_facies):
     """Return matplotlib legend Patch handles for every facies present in the section.
 
     Restricted to facies that actually appear so the legend doesn't clutter
     with unused entries.
     """
-    facies_meanings = {
-        "OVB":     "Overburden",
-        "AT":      "AT — anorthositic troctolite",
-        "AAT":     "AAT — augite-bearing anorthositic troctolite",
-        "AT_T":    "AT/T — anorth. troctolite to troctolite",
-        "T":       "T — troctolite",
-        "T_ORT":   "T-ORT — troctolite to olivine-rich troctolite",
-        "T_NOR":   "T-NOR — troctolite to norite",
-        "AGT_OG":  "AGT-OG — augite troct. to olivine gabbro",
-        "AGT":     "AGT — augite troctolite",
-        "GA":      "GA — gabbroic anorthosite",
-        "MELAGAB": "MELAGAB — melagabbro",
-        "GA_A":    "GA-A — altered gabbroic anorthosite",
-        "ORT":     "ORT — olivine-rich troctolite (40–50% ol)",
-        "PIC":     "PIC — picrite (melatroctolite)",
-        "FP":      "FP — feldspathic peridotite",
-        "PER":     "PER — peridotite",
-        "DUN":     "DUN — dunite",
-        "HBLD":    "HBLD — hornblendite",
-        "HNFL":    "HNFL — hornfels",
-        "HET":     "HET — heterogeneous mixture",
-        "PEG":     "PEG — pegmatite",
-        "GRANO":   "GRANO — granophyre",
-        "QMONZ":   "QMONZ — quartz monzonite (footwall)",
-    }
+    facies_names = load_facies_names()
     handles = []
     # iterate in the style file's order so the legend mirrors the palette order
     for label, color in zip(style.labels, style.color_values):
         if label not in used_facies:
             continue
+        name = facies_names.get(label)
+        # OVB reads oddly as "OVB — Overburden"; the rest carry the code.
+        legend_label = label if name is None else (
+            name if label == "OVB" else f"{label} — {name}"
+        )
         handles.append(Patch(
             facecolor=color, edgecolor="k", linewidth=0.5,
-            label=facies_meanings.get(label, label),
+            label=legend_label,
         ))
     return handles
 
@@ -196,8 +196,20 @@ def plot_samples_panel(ax, samples_df, sharey_ax):
             fontsize=7, color="0.35")
 
 
-def plot_figure(section, style, geochem_attrs, output_stem: Path, samples_df=None):
-    """Build the multi-panel figure: section column + samples + geochem panels + legend."""
+def plot_figure(section, style, geochem_attrs, output_stem=None, samples_df=None):
+    """Build the multi-panel figure: section column + samples + geochem panels + legend.
+
+    Args:
+        section: pystrat.Section with any data attributes already attached.
+        style: pystrat.Style carrying the facies palette.
+        geochem_attrs: list of (attribute_name, x-axis label, log_x, kind) panel specs.
+        output_stem: file stem (no extension) to write .png and .pdf to. If None,
+            the figure is built but not written to disk — the notebook path.
+        samples_df: DataFrame of magnetics samples with a numeric `footage` column.
+
+    Returns:
+        The matplotlib Figure.
+    """
     n_geochem = len(geochem_attrs)
     has_samples = samples_df is not None and len(samples_df) > 0
     n_samples_col = 1 if has_samples else 0
@@ -305,12 +317,13 @@ def plot_figure(section, style, geochem_attrs, output_stem: Path, samples_df=Non
 
     fig.tight_layout(rect=(0, 0, 1, 0.945))
 
-    png_path = output_stem.with_suffix(".png")
-    pdf_path = output_stem.with_suffix(".pdf")
-    fig.savefig(png_path, dpi=200, bbox_inches="tight")
-    fig.savefig(pdf_path, bbox_inches="tight")
-    print(f"\nwrote {png_path}")
-    print(f"wrote {pdf_path}")
+    if output_stem is not None:
+        png_path = Path(output_stem).with_suffix(".png")
+        pdf_path = Path(output_stem).with_suffix(".pdf")
+        fig.savefig(png_path, dpi=200, bbox_inches="tight")
+        fig.savefig(pdf_path, bbox_inches="tight")
+        print(f"\nwrote {png_path}")
+        print(f"wrote {pdf_path}")
     return fig
 
 

@@ -1,0 +1,24 @@
+facies,name
+OVB,Overburden
+AT,Anorthositic troctolite
+AAT,Augite-bearing anorthositic troctolite
+AT_T,Anorthositic troctolite to troctolite
+T,Troctolite
+T_ORT,Troctolite to olivine-rich troctolite
+T_NOR,Troctolite to norite
+AGT_OG,Augite troctolite to olivine gabbro
+AGT,Augite troctolite
+GA,Gabbroic anorthosite
+MELAGAB,Melagabbro
+GA_A,Altered gabbroic anorthosite
+ORT,Olivine-rich troctolite
+PIC,Picrite (melatroctolite)
+FP,Feldspathic peridotite
+PER,Peridotite
+DUN,Dunite
+HBLD,Hornblendite
+HNFL,Hornfels
+HET,Heterogeneous mixture
+PEG,Pegmatite
+GRANO,Granophyre
+QMONZ,Quartz monzonite

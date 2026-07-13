@@ -8,10 +8,10 @@ Rock-type abbreviations follow the Severson scheme (after Phinney, 1972), reprod
 
 - Miller, Green, and Severson (2002), *Terminology, Nomenclature, and Classification of Keweenawan Igneous Rocks of Northeastern Minnesota* (MGS Report of Investigations, Chapter 1);
 - Severson (1994), NRRI Technical Report TR-1993-34, which defines the formal South Kawishiwi intrusion stratigraphic-unit codes used as margin labels here;
-- Severson (1993) Plate III, *South Stratigraphic Line — Hung on Top of U1 Unit* ([`../PLATE3_hung_strat_Dunka_Pit.pdf`](../PLATE3_hung_strat_Dunka_Pit.pdf)) — the canonical legend of two/three-letter rock-type codes, stratigraphic-unit codes, and field-mapping abbreviations used in the 1990s NRRI work; D-6A is one of the hung sections;
+- Severson (1993) Plate III, *South Stratigraphic Line — Hung on Top of U1 Unit* ([`PLATE3_hung_strat_Dunka_Pit.pdf`](PLATE3_hung_strat_Dunka_Pit.pdf)) — the canonical legend of two/three-letter rock-type codes, stratigraphic-unit codes, and field-mapping abbreviations used in the 1990s NRRI work; D-6A is one of the hung sections;
 - MN DNR Report 255-1/265/266 (Dahlberg, Peterson, and Frey, 1988–89), the parent report for the "Project 255-1" PGE summary tables and sample-description appendix bound with the log.
 
-![Severson rock-name abbreviations on the Phinney (1972) modal classification triangle. Two-letter codes (e.g. T, AT, GA, FP) are the pre-2000 scheme used in this log; three-letter codes (Agt, AnT, TAn) were adopted in logging campaigns after 2000.](../Duluth_Complex_rock_name_ABBREVIATIONS.JPG)
+![Severson rock-name abbreviations on the Phinney (1972) modal classification triangle. Two-letter codes (e.g. T, AT, GA, FP) are the pre-2000 scheme used in this log; three-letter codes (Agt, AnT, TAn) were adopted in logging campaigns after 2000.](Duluth_Complex_rock_name_ABBREVIATIONS.JPG)
 
 ## Lithology (Severson / Phinney 1972 scheme)
 
@@ -142,7 +142,7 @@ Vertical margin labels denote Severson's formal igneous-stratigraphic units with
 | BH | **Basal Heterogeneous** — heterogeneous troctolites; sulfide-bearing |
 | BH (u) / BH | In the D-6A section, the BH unit is split into an upper part (1463–1605 ft, labeled BH (u)) and a thin lower part (1695–1725 ft, labeled simply BH since the narrow interval has no room for a (l) suffix), separated by the U2 ultramafic unit. Same stratigraphic pattern as BAN (u) / BAN (l) below, but with the suffix omitted from the lower BH for legibility |
 | PEG | **Pegmatitic Unit of Foose** — heterogeneous troctolites with common pegmatoidal and/or pegmatite zones; sulfide-*poor* (distinct usage from PEG = pegmatite as a rock-type code) |
-| BAN | **Bottom Augite troctolite to Norite** — sulfide-bearing; dominantly norite with local augite troctolite. The "BAN" annotation in the Project 255-1 assay table identifies samples from this unit. Severson's hand-written *"BOTTOM AGT/N"* margin label = this unit |
+| BAN | **Basal Augite Troctolite and Norite** — sulfide-bearing; dominantly norite with local augite troctolite. The "BAN" annotation in the Project 255-1 assay table identifies samples from this unit. Severson's hand-written *"BOTTOM AGT/N"* margin label = this unit |
 | BAN (u) / BAN (l) | In the D-6A section, BAN is split into an upper part (1725–1817 ft) and a lower part (1872–2050 ft), separated by the U3 ultramafic unit (1817–1872 ft). Per M. Severson's 2026 sampling annotations, both intervals are BAN; the (u) / (l) suffix is a transcription convention so pystrat renders two distinct margin labels. The upper interval was originally hand-logged as "LOW AGT" in 1992 |
 | UPPER PEG | Upper Pegmatitic Unit (not in D-6A; present in higher Severson sections) |
 | UPPER GABBRO | Upper Gabbro (not in D-6A) |
@@ -233,7 +233,7 @@ D-6A geochemistry appears in three nested datasets bound with the log: (1) the o
 | DISU / DSU | Disseminated sulfide |
 | CMF (prefix) | Bondar-Clegg combined-methods package: multi-element trace metals (Cu, Ni, Co, S, Fe, As), likely 4-acid digest + ICP-AES with selected elements by AA |
 | CMQ (prefix) | Bondar-Clegg combined-methods package: total sulfur by LECO-style combustion |
-| BAN (sample-row annotation) | Source stratigraphic unit (Basal Augite troctolite and Norite); identifies which D-6A samples came from the BAN unit at the base of the hole |
+| BAN (sample-row annotation) | Source stratigraphic unit (Basal Augite Troctolite and Norite); identifies which D-6A samples came from the BAN unit at the base of the hole |
 | INF | Over-range / "infinite" — analyte exceeds upper calibration limit |
 | 100+ / 200+ / 50+ etc. | Above upper reporting limit |
 | <10, <0.2, <1 | Below lower detection limit |
