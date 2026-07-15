@@ -8,11 +8,25 @@ D-6A (DNRNUM 13933) is an exploration hole in the Dunka Pit area of the South Ka
 
 The Severson log lists a collar elevation of 1521 ft; the DNR dataset gives 1517 ft. The same DNR dataset records the hole as vertical (dip −90°, azimuth 360°), drilled by diamond coring for exploration; this is the as-collared orientation rather than a downhole deviation survey.
 
-The hole penetrates the South Kawishiwi Troctolitic Series — a layered sequence of anorthositic troctolite, augite troctolite, and ultramafic units — and bottoms in the Archean Giants Range Batholith footwall. It was logged by Mark Severson (NRRI) in 1992 as part of a major effort studying the layered series of the Duluth Complex. Geochemical datasets developed from the core are archived alongside the [stratigraphic section](../D-6A_log/D_6A_stratigraphic_column.ipynb), and the geologic context of the intrusion is described in the [geologic background](../duluth_complex_background.md).
+The hole penetrates the South Kawishiwi Troctolitic Series — a layered sequence of anorthositic troctolite, augite troctolite, and ultramafic units — and bottoms in the Archean Giants Range Batholith footwall. It was logged by Mark Severson (NRRI) in 1992 as part of a major effort studying the layered series of the Duluth Complex. Geochemical datasets developed from the core are archived alongside the [stratigraphic section](../D-6A_log/D_6A_stratigraphic_column.ipynb), and the geologic context of the intrusion is described in the [geologic background](../Duluth_Complex_background/duluth_complex_background.md).
 
 ## The May 2026 core examination
 
 The core was examined and sampled at the Minnesota DNR Drill Core Library in Hibbing, Minnesota, by Nick Swanson-Hysell, Mary Yao, and Kate Akin from May 26 to 28, 2026. Mark Severson's 1992 log was used as a scaffold for sampling and for additional observations recorded against the core.
+
+<p align="center">
+  <img src="sampling_images/core_shed.png" alt="Mary Yao and Kate Akin retrieving D-6A core boxes from the shelves of the Minnesota DNR Drill Core Library" width="400">
+</p>
+<p align="center">
+  <em>Mary Yao and Kate Akin pulling D-6A core boxes in the Minnesota DNR Drill Core Library, Hibbing, Minnesota.</em>
+</p>
+
+<p align="center">
+  <img src="sampling_images/core_box.jpg" alt="D-6A core boxes 97 and 98 (Main AGT interval) with Severson's South Kawishiwi Intrusion unit summaries affixed inside the box lids" width="400">
+</p>
+<p align="center">
+  <em>D-6A core boxes 97 and 98 (1052–1061 ft) within the Main AGT. Severson affixed summaries of the South Kawishiwi Intrusion stratigraphy and the map distribution of the unit inside the box lids at unit boundaries.</em>
+</p>
 
 The core has been variably depleted by prior sampling. Some intervals survive only as quarter core, which limited or precluded additional sampling; those intervals are flagged in the [notes below](#additional-notes) and in the sample table.
 
