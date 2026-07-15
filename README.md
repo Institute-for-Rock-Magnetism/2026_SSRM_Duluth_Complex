@@ -54,7 +54,7 @@ The projects are organized around rock magnetic characterization of the distinct
 
 Characterizing the units in this way is motivated by a set of broader questions that the assembled data can begin to address: how the ratio of remanent to induced magnetization varies between units and what that implies for interpretation of the aeromagnetic field over the Duluth Complex; how serpentinization has modified the magnetic mineralogy of the olivine-rich units; whether remanence is carried by inclusions hosted within silicate phases or by interstitial oxides, and how that partitioning differs between lithologies; what the oxide- and sulfide-rich basal cumulates record; and how laboratory susceptibility on prepared specimens compares with the susceptibility measured downhole on the split core.
 
-The [geologic background](duluth_complex_background.md) page sets out the Midcontinent Rift and Duluth Complex context, including why the ultramafic units and the basal contact are of particular rock magnetic interest.
+The [geologic background](Duluth_Complex_background/duluth_complex_background.md) page sets out the Midcontinent Rift and Duluth Complex context, including why the ultramafic units and the basal contact are of particular rock magnetic interest.
 
 ## The core in brief
 
@@ -66,7 +66,8 @@ The core was examined and sampled at the Minnesota DNR Drill Core Library in Hib
 
 | Path | Contents |
 |---|---|
-| [duluth_complex_background.md](duluth_complex_background.md) | Geologic background on the Midcontinent Rift, the Duluth Complex, and the South Kawishiwi intrusion |
+| [Duluth_Complex_background/duluth_complex_background.md](Duluth_Complex_background/duluth_complex_background.md) | Geologic background on the Midcontinent Rift, the Duluth Complex, and the South Kawishiwi intrusion |
+| [Duluth_Complex_background/aeromagnetic_minnesota.md](Duluth_Complex_background/aeromagnetic_minnesota.md) | Interactive statewide aeromagnetic map with context on total magnetic intensity anomalies, induced and remanent magnetization, and the Koenigsberger ratio |
 | [D-6A_log/](D-6A_log/D_6A_stratigraphic_column.ipynb) | Mark Severson's 1992 log and derived products: pystrat-ready stratigraphic section CSVs, a facies style palette, transcribed geochemistry datasets, the plotting script, and a [notebook that renders the stratigraphic column](D-6A_log/D_6A_stratigraphic_column.ipynb). The file schemas and data conventions are set out in the [data dictionary](D-6A_log/data_dictionary.md), and the codes themselves in the [acronym glossary](D-6A_log/D_6A_log_codes.md) |
 | [D-6A_sampling/](D-6A_sampling/sampling.md) | The hole itself, the May 2026 core examination and sampling, the sample table, core-box layout and photo conventions, and specimen preparation plans |
 | [D-6A_data/](D-6A_data/measured_data.md) | Measured data collected from the core, including the [KT-10 magnetic susceptibility measurements](D-6A_data/measured_data.md) |

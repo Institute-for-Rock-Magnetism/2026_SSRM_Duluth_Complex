@@ -8,11 +8,25 @@ D-6A (DNRNUM 13933) is an exploration hole in the Dunka Pit area of the South Ka
 
 The Severson log lists a collar elevation of 1521 ft; the DNR dataset gives 1517 ft. The same DNR dataset records the hole as vertical (dip −90°, azimuth 360°), drilled by diamond coring for exploration; this is the as-collared orientation rather than a downhole deviation survey.
 
-The hole penetrates the South Kawishiwi Troctolitic Series — a layered sequence of anorthositic troctolite, augite troctolite, and ultramafic units — and bottoms in the Archean Giants Range Batholith footwall. It was logged by Mark Severson (NRRI) in 1992 as part of a major effort studying the layered series of the Duluth Complex. Geochemical datasets developed from the core are archived alongside the [stratigraphic section](../D-6A_log/D_6A_stratigraphic_column.ipynb), and the geologic context of the intrusion is described in the [geologic background](../duluth_complex_background.md).
+The hole penetrates the South Kawishiwi Troctolitic Series — a layered sequence of anorthositic troctolite, augite troctolite, and ultramafic units — and bottoms in the Archean Giants Range Batholith footwall. It was logged by Mark Severson (NRRI) in 1992 as part of a major effort studying the layered series of the Duluth Complex. Geochemical datasets developed from the core are archived alongside the [stratigraphic section](../D-6A_log/D_6A_stratigraphic_column.ipynb), and the geologic context of the intrusion is described in the [geologic background](../Duluth_Complex_background/duluth_complex_background.md).
 
 ## The May 2026 core examination
 
-The core was examined and sampled at the Minnesota DNR Drill Core Library in Hibbing, Minnesota, by Nick Swanson-Hysell, Mary Yao, and Kate Akin from May 26 to 28, 2026. Mark Severson's 1992 log was used as a scaffold for sampling and for additional observations recorded against the core.
+The core was examined and sampled at the Minnesota DNR Drill Core Library in Hibbing, Minnesota, by Nick Swanson-Hysell, Mary Yao, and Kate Akin from May 26 to 28, 2026. Mark Severson's 1992 log was used as a scaffold for sampling and for additional observations recorded against the core. Photos of every sample in the core, along with photos of the core shed and the sampling effort, are available in [this Dropbox folder](https://www.dropbox.com/scl/fo/ksp1jauso62vg7z0q0eu0/AMtC6xtf0Aw67c-zY6dreJw?rlkey=pyddy0qvpkuqzj07uaxxeh6bo&st=orobj8ng&dl=0) — a resource for seeing the context of the samples being analyzed.
+
+<p align="center">
+  <img src="sampling_images/core_shed.png" alt="Mary Yao and Kate Akin retrieving D-6A core boxes from the shelves of the Minnesota DNR Drill Core Library" width="400">
+</p>
+<p align="center">
+  <em>Mary Yao and Kate Akin pulling D-6A core boxes in the Minnesota DNR Drill Core Library, Hibbing, Minnesota.</em>
+</p>
+
+<p align="center">
+  <img src="sampling_images/core_box.jpg" alt="D-6A core boxes 97 and 98 (Main AGT interval) with Severson's South Kawishiwi Intrusion unit summaries affixed inside the box lids" width="400">
+</p>
+<p align="center">
+  <em>D-6A core boxes 97 and 98 (1052–1061 ft) within the Main AGT. Severson affixed summaries of the South Kawishiwi Intrusion stratigraphy and the map distribution of the unit inside the box lids at unit boundaries.</em>
+</p>
 
 The core has been variably depleted by prior sampling. Some intervals survive only as quarter core, which limited or precluded additional sampling; those intervals are flagged in the [notes below](#additional-notes) and in the sample table.
 
@@ -32,6 +46,41 @@ Magnetic susceptibility was measured on the core during the examination with a h
 | `rock type` | Our interpreted rock type (e.g. `augite troctolite`, `quartz monzonite`) |
 | `sulfide (%)` | Estimated visible sulfide content, in modal percent |
 | `our description` | Our hand-sample description (grain size, texture, alteration, fabric) |
+| `group` | IRM Summer School working group (from the `Group` column of `SSRM Sample Book Keeper.xlsx`); sets the `Locality_ID` in the IRM database — see below |
+| `lithologies` | Rock type mapped to the [MagIC controlled vocabulary](https://www2.earthref.org/vocabularies) (colon-delimited list; e.g. `Troctolite:Picrite`) |
+| `geologic classes` | MagIC `geologic_classes` vocabulary (`Igneous:Intrusive` throughout) |
+| `geologic types` | MagIC `geologic_types` vocabulary: `Layered Intrusion` for Duluth Complex units, `Intrusion` for the granophyre (interpreted as felsic series xenoliths), `Pluton` for the Giants Range Batholith footwall |
+| `method codes` | MagIC method codes for field sampling and orientation: `FS-C-DRILL:SO-V` (vertical drill core), `FS-C-DRILL:SO-NO` for the unoriented core chip |
+| `age`, `age sigma` | Site age, with the uncertainty given at 1σ per MagIC convention. Duluth Complex troctolitic series units: 1096.19 ± 0.095 Ma, the U-Pb zircon date for the Partridge River intrusion {cite}`Swanson-Hysell2021c` (reported as ±0.19 Ma 2σ). Granophyre sites: 1106.9 ± 0.9 Ma, the weighted mean U-Pb zircon date for the early stage granophyres of the Duluth Complex felsic series {cite}`Vervoort2007a` (reported as ±1.8 Ma), as the granophyre in D-6A is interpreted to be felsic series material within the South Kawishiwi intrusion as xenoliths |
+| `age low`, `age high` | Site age range for the Giants Range Batholith footwall: 2674 to 2685 Ma, spanning the U-Pb zircon dates for phases of the batholith {cite}`Boerboom1993a`, as the specific phase intersected by D-6A is not directly dated |
+| `age unit` | `Ma` |
+| `age citation` | DOI of the publication the age is from; carried into the ages table (`D-6A_ages.csv`) rather than into the magnetics tables |
+
+These last columns carry fields required for upload to the [MagIC database](https://www2.earthref.org/MagIC) (`sites.lithologies`, `sites.geologic_classes`, `sites.geologic_types`, `sites.method_codes`, `sites.age`) that are not currently part of the IRM database output; they are passed through `build_specimens.py` into `D-6A_specimens.csv` as additional columns beyond the IRM template, with the plan that the IRM database will add columns for these required outputs.
+
+## Ages table (`D-6A_ages.csv`)
+
+`build_specimens.py` also writes [`D-6A_ages.csv`](D-6A_ages.csv), a [MagIC ages table](https://www2.earthref.org/MagIC/data-models/3.0#ages) with one row per age determination. MagIC has no age-citation column in the sites or locations tables, so this table is what documents where the assigned ages come from. Each row carries the age (or age range), the `GM-UPB` method code, the citation DOI, the localities the age applies to, and a description of the basis for the assignment that lists the sites it applies to:
+
+1. **1096.19 ± 0.095 Ma** — Partridge River intrusion U-Pb zircon date {cite}`Swanson-Hysell2021c`, applied to the troctolitic series sites
+2. **1106.9 ± 0.9 Ma** — weighted mean U-Pb zircon date for the early stage granophyres of the Duluth Complex felsic series {cite}`Vervoort2007a`, applied to the granophyre sites (D6A-397, D6A-441, D6A-653)
+3. **2674–2685 Ma** — range of U-Pb zircon dates for phases of the Giants Range batholith {cite}`Boerboom1993a`, applied to the footwall sites
+
+The table accompanies the study and can be uploaded with the MagIC contribution without adding citation columns to the magnetics tables.
+
+## Localities as lithology groups
+
+For the organization of the IRM Summer School groups that will be working on these samples, the `Locality_ID` in the IRM database groups the samples into lithology-group localities so that they can be filtered within the database. The assignment follows the `group` column (from the `Group` column of `SSRM Sample Book Keeper.xlsx`):
+
+| `group` | `Locality_ID` | Samples |
+|---|---|---|
+| AGT | `D6A-AGT` | 33 |
+| Ultramafic | `D6A-ultramafic` | 18 |
+| BH | `D6A-BH` | 12 |
+| BAN | `D6A-BAN` | 11 |
+| Felsic | `D6A-felsic` | 10 |
+
+Locality-level lithologies and ages are aggregated from the member sites by `build_specimens.py`. Localities whose sites share a single age carry the PRI age (1096.19 ± 0.095 Ma); `D6A-felsic`, which combines felsic series granophyre and oxidized augite troctolite of the Duluth Complex with the Giants Range Batholith footwall, instead carries an age range (1096.19 to 2685 Ma).
 
 `sample type` records the form of core that was present and how the sample was taken. For the "… core core" values, a paleomagnetic (pmag) core was drilled out of the available core; for `quarter core`, the sample is the quarter-core piece itself. DNR policy requires that at least one quarter of the original core be preserved. Observed values:
 
@@ -65,7 +114,7 @@ The core is arranged as follows (this example is box no. 185, which goes from 18
 
 ## Photos
 
-Photos were taken of each sample with up being down core, with the sample card to the left of the sample (i.e. higher in the core).
+Photos were taken of each sample with up being down core, with the sample card to the left of the sample (i.e. higher in the core). These sample photos, along with additional photos of the core shed and the sampling effort, are available in [this Dropbox folder](https://www.dropbox.com/scl/fo/ksp1jauso62vg7z0q0eu0/AMtC6xtf0Aw67c-zY6dreJw?rlkey=pyddy0qvpkuqzj07uaxxeh6bo&st=orobj8ng&dl=0) for context on the samples.
 
 ## Sample prep plans
 

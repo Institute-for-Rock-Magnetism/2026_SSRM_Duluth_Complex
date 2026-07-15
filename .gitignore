@@ -1,13 +1,14 @@
 .DS_Store
 
-# JupyterBook / MyST build output
+# MyST / JupyterBook build output
 _build/
 .jupyter_cache/
 node_modules/
 
 # Jupyter
 .ipynb_checkpoints/
-D-6A_log/__pycache__/plot_D_6A.cpython-312.pyc
 D-6A_log/severson_log.md
-D-6A_log/__pycache__/plot_D_6A.cpython-39.pyc
-D-6A_log/__pycache__/plot_D_6A.cpython-311.pyc
+
+# Python bytecode
+__pycache__/
+*.pyc

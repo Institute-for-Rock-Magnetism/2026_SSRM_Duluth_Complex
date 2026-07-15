@@ -27,9 +27,15 @@ project:
   bibliography:
     - references.bib
 
+  # Copied verbatim into the built site so the interactive aeromagnetic map
+  # can be embedded as an iframe at /aeromagnetic/aeromagnetic-minnesota.html
+  static_files:
+    - Duluth_Complex_background/aeromagnetic
+
   toc:
     - file: README.md
-    - file: duluth_complex_background.md
+    - file: Duluth_Complex_background/duluth_complex_background.md
+    - file: Duluth_Complex_background/aeromagnetic_minnesota.md
     - title: The Severson 1992 log
       children:
         - file: D-6A_log/D_6A_stratigraphic_column.ipynb
@@ -44,6 +50,7 @@ site:
   template: book-theme
   title: D-6A Drill Core — IRM Summer School 2026
   options:
+    style: style.css
     logo_text: D-6A Drill Core — IRM Summer School 2026
     lang: en
     hide_toc: false

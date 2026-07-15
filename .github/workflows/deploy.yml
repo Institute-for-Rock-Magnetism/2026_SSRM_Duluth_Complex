@@ -40,7 +40,7 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install jupyter-book numpy pandas matplotlib pystrat ipykernel
+          pip install "jupyter-book>=2.0" "mystmd>=1.10" numpy pandas matplotlib pystrat ipykernel
 
       - name: Build the book
         env:
