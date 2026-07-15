@@ -1,1 +1,8 @@
 .DS_Store
+
+# MyST / JupyterBook build output
+_build/
+
+# Python bytecode
+__pycache__/
+*.pyc
