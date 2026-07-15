@@ -1,0 +1,11 @@
+/* Site-wide style overrides, loaded via site.options.style in myst.yml. */
+
+/* The theme wraps {iframe} directives in a fixed 5:3 landscape box
+   (padding-bottom: 60%). The embedded aeromagnetic map renders its
+   canvas at a 6:5 aspect plus a toolbar, so the default box leaves
+   grey margins. Size this figure to match the map's natural shape
+   and cap its width at the map's natural 736px. */
+#aeromag-minnesota > div > div {
+  width: min(740px, 100%) !important;
+  padding-bottom: min(115%, 700px) !important;
+}
