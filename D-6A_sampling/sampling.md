@@ -68,8 +68,9 @@ The files associated with building out the IRM specimen table live in [`IRM_data
 - [`build_specimens.py`](IRM_database_prep/build_specimens.py) — converts `D-6A_samples.csv` (one row per sample) into the specimen-level table, writing `D-6A_specimens.csv` and `D-6A_ages.csv`
 - [`D-6A_specimens.csv`](IRM_database_prep/D-6A_specimens.csv) — the specimen table for IRM database entry, in the [`irm_database_template.csv`](IRM_database_prep/irm_database_template.csv) format plus the MagIC extension columns
 - [`D-6A_ages.csv`](IRM_database_prep/D-6A_ages.csv) — the MagIC ages table (see below)
-- `SSRM Sample Book Keeper.xlsx` — specimen-prep bookkeeping (source of the `group` and `thick section` columns)
 - `Samples_July15.xlsx` — IRM balance mass measurements (source of the `mass` columns)
+
+The specimen-prep bookkeeping spreadsheet `SSRM Sample Book Keeper.xlsx` (source of the `group` and `thick section` columns) stays in the `D-6A_sampling` folder as a useful reference on the prepared specimens.
 
 ## Ages table (`D-6A_ages.csv`)
 

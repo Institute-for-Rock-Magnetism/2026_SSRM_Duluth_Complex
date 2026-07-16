@@ -34,15 +34,15 @@ Each group rotates through the five instrument stations over the week of July 20
 
 ## Project intervals
 
-Depths are depth from collar in feet, and unit boundaries follow the Severson (1992) log as tabulated in [`D_6A_section_primary.csv`](D-6A_log/D_6A_section_primary.csv). Sample counts are the May 2026 samples falling in each unit; the full table is in [`D-6A_samples.csv`](D-6A_sampling/D-6A_samples.csv).
+Depths are depth from collar in feet, and unit boundaries follow the Severson (1992) log as tabulated in [`D_6A_section_primary.csv`](D-6A_log/D_6A_section_primary.csv). Sample counts follow the working-group assignments in the sample book keeper (`SSRM Sample Book Keeper.xlsx`), recorded in the `group` column of [`D-6A_samples.csv`](D-6A_sampling/D-6A_samples.csv), which also set the locality groupings in the IRM database.
 
 | Group | Unit(s) | Interval (ft) | Samples |
 |---|---|---|---|
-| 1 — Main Augite Troctolite | MAIN AGT | 124–1297 | 37 |
-| 2 — Ultramafic | U1; U3 | 1297–1463; 1817–1872 | 17 |
+| 1 — Main Augite Troctolite | MAIN AGT | 124–1297 | 33 |
+| 2 — Ultramafic | U1; U3 | 1297–1463; 1817–1872 | 18 |
 | 3 — BAN | BAN (u); BAN (l) | 1725–1817; 1872–2050 | 11 |
 | 4 — Heterogeneous | BH (u); BH | 1463–1605; 1695–1725 | 12 |
-| 5 — Felsic | GRAN, plus granophyre and the oxidized augite troctolite at D6A-420 | 2050–2125, plus xenolith intervals | 6 |
+| 5 — Felsic | GRAN, plus granophyre and the oxidized augite troctolite at D6A-420 | 2050–2125, plus xenolith intervals | 10 |
 
 Specimens are being prepared from the May 2026 samples by Marcus Lorenzen; the preparation scheme is described in the [sampling documentation](D-6A_sampling/sampling.md#sample-prep-plans).
 
