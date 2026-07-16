@@ -13,11 +13,12 @@ accompany the study without needing citation columns in the magnetics tables.
 import csv
 from pathlib import Path
 
-ROOT = Path("/Users/penokean/0000_GitHub/2026_SSRM_Duluth_Complex/D-6A_sampling")
-SAMPLES = ROOT / "D-6A_samples.csv"
-TEMPLATE = ROOT / "irm_database_template.csv"
-OUT = ROOT / "D-6A_specimens.csv"
-OUT_AGES = ROOT / "D-6A_ages.csv"
+PREP_DIR = Path(__file__).resolve().parent          # D-6A_sampling/IRM_database_prep
+SAMPLING_DIR = PREP_DIR.parent                      # D-6A_sampling
+SAMPLES = SAMPLING_DIR / "D-6A_samples.csv"
+TEMPLATE = PREP_DIR / "irm_database_template.csv"
+OUT = PREP_DIR / "D-6A_specimens.csv"
+OUT_AGES = PREP_DIR / "D-6A_ages.csv"
 
 # IRM template headers
 with TEMPLATE.open(encoding="utf-8-sig") as f:
@@ -144,21 +145,33 @@ for rec in samples:
 
     az, plg = orient(stype)
 
-    for suffix in ("a", "b"):
+    for suffix in ("a", "b", "c", "d", "t"):
+        mass = rec[f"mass {suffix} (g)"] if suffix != "t" else ""
+        spec_az, spec_plg = "", ""  # chips and thick sections are unoriented
+        if suffix in ("c", "d"):
+            # additional rock chips exist only where a mass or note was recorded
+            chip_note = rec[f"chip {suffix} note"]
+            if not mass and not chip_note:
+                continue
+            spec_desc = "chip for rock magnetic experiments"
+            if chip_note:
+                spec_desc += f", {chip_note}"
+        elif suffix == "t":
+            if rec["thick section"] != "yes":
+                continue
+            spec_desc = "polished thick section prepared for SEM analysis and QDM analysis"
+        elif suffix == "a":
+            spec_az, spec_plg = az, plg
+            spec_desc = "oriented specimen for remanence"
+        else:
+            spec_desc = "chip for rock magnetic experiments"
         spec_id = f"{sample}{suffix}"
-        spec_az = az if suffix == "a" else ""
-        spec_plg = plg if suffix == "a" else ""
-        spec_desc = (
-            "oriented specimen for remanence"
-            if suffix == "a"
-            else "chip for rock magnetic experiments"
-        )
         record = {
             "Specimen_ID": spec_id,
             "Specimen_description": spec_desc,
             "Specimen_azimuth": spec_az,
             "Specimen_plunge": spec_plg,
-            "Specimen_mass[g]": "",
+            "Specimen_mass[g]": mass,
             "Specimen_vol[cc]": "",
             "Specimen_coordinate": footage,
             "Uchannel_length[cm]": "",
@@ -213,7 +226,7 @@ with OUT.open("w", newline="") as f:
     writer.writerow(headers)
     writer.writerows(rows_out)
 
-print(f"Wrote {len(rows_out)} specimen rows ({len(rows_out)//2} samples) to {OUT}")
+print(f"Wrote {len(rows_out)} specimen rows ({len(samples)} samples) to {OUT}")
 
 # MagIC ages table: one row per age determination documenting the source of
 # each assigned age; citations live here rather than in the magnetics tables.

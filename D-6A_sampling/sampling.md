@@ -55,12 +55,25 @@ Magnetic susceptibility was measured on the core during the examination with a h
 | `age low`, `age high` | Site age range for the Giants Range Batholith footwall: 2674 to 2685 Ma, spanning the U-Pb zircon dates for phases of the batholith {cite}`Boerboom1993a`, as the specific phase intersected by D-6A is not directly dated |
 | `age unit` | `Ma` |
 | `age citation` | DOI of the publication the age is from; carried into the ages table (`D-6A_ages.csv`) rather than into the magnetics tables |
+| `mass a (g)` … `mass d (g)` | Measured specimen masses in grams (IRM database convention), from the IRM balance measurements (`Samples_July15.xlsx`) |
+| `chip c note`, `chip d note` | Mineral note for the additional chips (e.g. `hornblende chip`, `serpentine chip`), appended to the specimen description. A `c`/`d` chip specimen is generated when it has a mass or a note; chips are unoriented (no specimen azimuth/plunge) |
+| `thick section` | `yes` where a polished thick section was prepared (from the `Thick Section` column of `SSRM Sample Book Keeper.xlsx`); generates an unoriented `t` specimen (e.g. `D6A-2123t`) for SEM and QDM analysis |
 
 These last columns carry fields required for upload to the [MagIC database](https://www2.earthref.org/MagIC) (`sites.lithologies`, `sites.geologic_classes`, `sites.geologic_types`, `sites.method_codes`, `sites.age`) that are not currently part of the IRM database output; they are passed through `build_specimens.py` into `D-6A_specimens.csv` as additional columns beyond the IRM template, with the plan that the IRM database will add columns for these required outputs.
 
+## IRM database prep ([`IRM_database_prep/`](IRM_database_prep/))
+
+The files associated with building out the IRM specimen table live in [`IRM_database_prep/`](IRM_database_prep/):
+
+- [`build_specimens.py`](IRM_database_prep/build_specimens.py) — converts `D-6A_samples.csv` (one row per sample) into the specimen-level table, writing `D-6A_specimens.csv` and `D-6A_ages.csv`
+- [`D-6A_specimens.csv`](IRM_database_prep/D-6A_specimens.csv) — the specimen table for IRM database entry, in the [`irm_database_template.csv`](IRM_database_prep/irm_database_template.csv) format plus the MagIC extension columns
+- [`D-6A_ages.csv`](IRM_database_prep/D-6A_ages.csv) — the MagIC ages table (see below)
+- `SSRM Sample Book Keeper.xlsx` — specimen-prep bookkeeping (source of the `group` and `thick section` columns)
+- `Samples_July15.xlsx` — IRM balance mass measurements (source of the `mass` columns)
+
 ## Ages table (`D-6A_ages.csv`)
 
-`build_specimens.py` also writes [`D-6A_ages.csv`](D-6A_ages.csv), a [MagIC ages table](https://www2.earthref.org/MagIC/data-models/3.0#ages) with one row per age determination. MagIC has no age-citation column in the sites or locations tables, so this table is what documents where the assigned ages come from. Each row carries the age (or age range), the `GM-UPB` method code, the citation DOI, the localities the age applies to, and a description of the basis for the assignment that lists the sites it applies to:
+`build_specimens.py` also writes [`D-6A_ages.csv`](IRM_database_prep/D-6A_ages.csv), a [MagIC ages table](https://www2.earthref.org/MagIC/data-models/3.0#ages) with one row per age determination. MagIC has no age-citation column in the sites or locations tables, so this table is what documents where the assigned ages come from. Each row carries the age (or age range), the `GM-UPB` method code, the citation DOI, the localities the age applies to, and a description of the basis for the assignment that lists the sites it applies to:
 
 1. **1096.19 ± 0.095 Ma** — Partridge River intrusion U-Pb zircon date {cite}`Swanson-Hysell2021c`, applied to the troctolitic series sites
 2. **1106.9 ± 0.9 Ma** — weighted mean U-Pb zircon date for the early stage granophyres of the Duluth Complex felsic series {cite}`Vervoort2007a`, applied to the granophyre sites (D6A-397, D6A-441, D6A-653)
