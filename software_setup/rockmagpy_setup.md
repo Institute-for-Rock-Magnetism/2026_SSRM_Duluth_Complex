@@ -105,7 +105,7 @@ Find `RockmagPy-notebooks-main.zip` in your **Downloads** folder and double-clic
 :::
 :::{tab-item} Windows (PC)
 :sync: windows
-Find `RockmagPy-notebooks-main.zip` in your **Downloads** folder, right-click it, and choose **Extract All…**, then **Extract**. A folder named `RockmagPy-notebooks-main` appears. Move it into your **Documents** folder so it's easy to find later.
+Find `RockmagPy-notebooks-main.zip` in your **Downloads** folder, right-click it, and choose **Extract All…**, then **Extract**. A folder named `RockmagPy-notebooks-main` appears. Move it into your **Documents** folder so it's easy to find later. (On many Windows computers, Documents is managed by OneDrive — that's fine, but remember which one you used: in the next step, a OneDrive-managed Documents folder appears inside the **OneDrive** folder rather than at the top level.)
 :::
 ::::
 
@@ -123,7 +123,7 @@ jupyter lab
 
 After a few seconds your web browser opens a JupyterLab tab. (Although it runs in the browser, everything is happening locally on your computer — no internet is needed once it's running.)
 
-In the left sidebar of JupyterLab is a file browser showing the folders on your computer. Double-click **Documents**, then **RockmagPy-notebooks-main**, then the folder for the data type you're working with (for example `hysteresis_backfield_notebooks` or `MPMS_notebooks`), and double-click a notebook (a file ending in `.ipynb`) to open it. If a dialog pops up asking you to select a kernel (some notebooks were last saved on a different system), choose **Python 3 (ipykernel)** and click **Select**. Run a notebook's cells one at a time with <kbd>shift</kbd>+<kbd>return</kbd>, or run everything via the menu with **Run → Run All Cells**.
+In the left sidebar of JupyterLab is a file browser showing the folders on your computer. Double-click **Documents** (on Windows, if you don't see Documents, look inside the **OneDrive** folder), then **RockmagPy-notebooks-main**, then the folder for the data type you're working with (for example `hysteresis_backfield_notebooks` or `MPMS_notebooks`), and double-click a notebook (a file ending in `.ipynb`) to open it. If a dialog pops up asking you to select a kernel (some notebooks were last saved on a different system), choose **Python 3 (ipykernel)** and click **Select**. Run a notebook's cells one at a time with <kbd>shift</kbd>+<kbd>return</kbd>, or run everything via the menu with **Run → Run All Cells**.
 
 Two things to know while JupyterLab is running:
 
