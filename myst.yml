@@ -45,6 +45,9 @@ project:
       children:
         - file: D-6A_sampling/sampling.md
         - file: D-6A_data/measured_data.md
+    - title: Data analysis
+      children:
+        - file: software_setup/rockmagpy_setup.md
 
 site:
   template: book-theme
