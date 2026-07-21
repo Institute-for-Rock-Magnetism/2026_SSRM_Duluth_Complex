@@ -12,3 +12,22 @@ D-6A_log/severson_log.md
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Scratch area for testing the IRM database export to MagIC format
+D-6A_data/D-6A_MagIC_test/
+
+# Demag GUI tutorial: keep only the raw input data (the SS20- CIT files and the
+# magic_contribution_*.txt download); ignore everything the tutorial regenerates
+# when a user works through it in place (MagIC tables, unpacked contributions,
+# .redo fit files, .magic conversions, and the dated upload file).
+software_setup/Demag_GUI_tutorial/data/**/*.redo
+software_setup/Demag_GUI_tutorial/data/**/*.magic
+software_setup/Demag_GUI_tutorial/data/**/ages.txt
+software_setup/Demag_GUI_tutorial/data/**/contribution.txt
+software_setup/Demag_GUI_tutorial/data/**/locations.txt
+software_setup/Demag_GUI_tutorial/data/**/measurements.txt
+software_setup/Demag_GUI_tutorial/data/**/samples.txt
+software_setup/Demag_GUI_tutorial/data/**/sites.txt
+software_setup/Demag_GUI_tutorial/data/**/specimens.txt
+software_setup/Demag_GUI_tutorial/data/SS20-/SS20-_*.txt
+software_setup/Demag_GUI_tutorial/data/SS20-/Michipicoten-Island_*.txt

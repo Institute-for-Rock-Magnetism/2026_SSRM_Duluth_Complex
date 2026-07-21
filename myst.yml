@@ -48,6 +48,7 @@ project:
     - title: Data analysis
       children:
         - file: software_setup/rockmagpy_setup.md
+        - file: software_setup/Demag_GUI_tutorial/demag_gui_tutorial.md
 
 site:
   template: book-theme
