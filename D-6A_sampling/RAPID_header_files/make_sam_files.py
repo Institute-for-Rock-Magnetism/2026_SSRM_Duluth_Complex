@@ -8,8 +8,13 @@ sample file per specimen. File formats follow the output of mk_sam_file.py
 (https://github.com/Swanson-Hysell-Group/SAM_Header) so that the files can be
 used directly by the IRM RAPID system and the CIT/paleomag conventions.
 
-These specimens are from unoriented drill core, so the core plate strike is
-unconstrained and set to 0. The core plate dip follows from the specimen
+These specimens are from unoriented drill core, so the azimuth is unknown and
+the specimen->geographic rotation should leave declination unchanged (an
+identity rotation, azimuth = 0). Under the CIT orientation convention that
+pmagpy's cit conversion applies, the resulting sample azimuth is
+core_strike - 90, so the core plate strike is set to 90 to give azimuth = 0.
+Setting it to 0 would instead impose an azimuth of -90, an unfounded 90deg
+rotation of the declination. The core plate dip follows from the specimen
 plunge convention used in the specimens table:
     Specimen_plunge =   0  (specimen axis horizontal) -> core plate dip = 90
     Specimen_plunge = -90  (specimen axis pointing down) -> core plate dip = 0
@@ -26,7 +31,7 @@ SPECIMENS_CSV = HERE.parent / "IRM_database_prep" / "D-6A_specimens.csv"
 SITE_ID = "D6A-"                    # locality prefix; specimen files are SITE_ID + sample
 COMMENT = "unoriented drill core"   # written to line 1 of each sample file
 LOCAL_DEC = 0.0                     # no declination correction for unoriented core
-CORE_STRIKE = 0.0                   # core plate strike unconstrained; set to 0
+CORE_STRIKE = 90.0                  # gives sample azimuth 0 (identity); see module docstring
 BEDDING_STRIKE = 90.0               # mk_sam_file.py defaults -> no tilt correction
 BEDDING_DIP = 0.0
 
@@ -112,12 +117,18 @@ def main():
             with (group_dir / specimen_id).open("w", newline="") as f:
                 f.write(lines)
 
-        # .inp file for later pmagpy CIT import
+        # .inp file for later pmagpy CIT import.
+        # naming_convention 5 means site name = sample name, so each sampled
+        # depth (e.g. D6A-2022) becomes its own site under the group location
+        # (e.g. D6A-BAN). Each depth is treated as a distinct site because
+        # different levels of the core may record different cooling histories
+        # tied to separate magma injection events and to proximity to the
+        # footwall.
         inp = "CIT\n"
         inp += ("sam_path\tfield_magic_codes\tlocation\tnaming_convention\t"
                 "num_terminal_char\tdont_average_replicate_measurements\t"
                 "peak_AF\ttime_stamp\n")
-        inp += f"./{group}.sam\tSO-V\t{group}\t2\t1\tTrue\tNone\t0.0\n"
+        inp += f"./{group}.sam\tSO-V\t{group}\t5\t1\tTrue\tNone\t0.0\n"
         (group_dir / (group + ".inp")).write_text(inp)
 
         print(f"{group}: {len(specimens)} specimens")

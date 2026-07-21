@@ -16,6 +16,16 @@ __pycache__/
 # Scratch area for testing the IRM database export to MagIC format
 D-6A_data/D-6A_MagIC_test/
 
+# Duluth Complex background notebook: keep only the raw MagIC download
+# (magic_contribution_17073.txt); ignore the tables the notebook unpacks from
+# it at run time.
+Duluth_Complex_background/pmag_data/pmag_new_MagIC/contribution.txt
+Duluth_Complex_background/pmag_data/pmag_new_MagIC/locations.txt
+Duluth_Complex_background/pmag_data/pmag_new_MagIC/measurements.txt
+Duluth_Complex_background/pmag_data/pmag_new_MagIC/samples.txt
+Duluth_Complex_background/pmag_data/pmag_new_MagIC/sites.txt
+Duluth_Complex_background/pmag_data/pmag_new_MagIC/specimens.txt
+
 # Demag GUI tutorial: keep only the raw input data (the SS20- CIT files and the
 # magic_contribution_*.txt download); ignore everything the tutorial regenerates
 # when a user works through it in place (MagIC tables, unpacked contributions,
