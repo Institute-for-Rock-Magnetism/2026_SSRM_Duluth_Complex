@@ -53,6 +53,16 @@ When you run the downloaded `.exe`, Windows may show a blue **"Windows protected
 
 The raw data used below are included in this book in the [`data/`](https://github.com/Institute-for-Rock-Magnetism/2026_SSRM_Duluth_Complex/tree/main/software_setup/Demag_GUI_tutorial/data) folder alongside this page. If you have cloned or downloaded the book repository you already have them; otherwise download that folder so you have the `SS20-` and `Fairchild2017` data directories to work with.
 
+:::{admonition} Quick download of the tutorial data
+:class: tip
+
+The fastest way to get everything you need is to download this zip archive of the original tutorial repository (~3 MB):
+
+**<https://github.com/Swanson-Hysell-Group/2023_Demag_GUI_tutorial/archive/master.zip>**
+
+Unzip it and you will have a `2023_Demag_GUI_tutorial-master` folder containing the `data/SS20-` and `data/Fairchild2017` directories used below. Make note of where you unzipped it, as you will need to navigate to these folders from within Pmag GUI.
+:::
+
 ## Tutorial instructions
 
 ### Data conversion to MagIC format
