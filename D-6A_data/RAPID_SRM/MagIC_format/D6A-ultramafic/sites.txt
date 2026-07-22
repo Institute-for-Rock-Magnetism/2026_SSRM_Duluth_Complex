@@ -1,0 +1,20 @@
+tab	sites
+site	location	lat	lon	analysts	citations
+D6A-1899	D6A-ultramafic	47.7	268.2		This study
+D6A-1888	D6A-ultramafic	47.7	268.2		This study
+D6A-1880	D6A-ultramafic	47.7	268.2		This study
+D6A-1868	D6A-ultramafic	47.7	268.2		This study
+D6A-1861	D6A-ultramafic	47.7	268.2		This study
+D6A-1857	D6A-ultramafic	47.7	268.2		This study
+D6A-1849	D6A-ultramafic	47.7	268.2		This study
+D6A-1845	D6A-ultramafic	47.7	268.2		This study
+D6A-1833	D6A-ultramafic	47.7	268.2		This study
+D6A-1822	D6A-ultramafic	47.7	268.2		This study
+D6A-1605	D6A-ultramafic	47.7	268.2		This study
+D6A-1463	D6A-ultramafic	47.7	268.2		This study
+D6A-1461	D6A-ultramafic	47.7	268.2		This study
+D6A-1446	D6A-ultramafic	47.7	268.2		This study
+D6A-1342	D6A-ultramafic	47.7	268.2		This study
+D6A-1338	D6A-ultramafic	47.7	268.2		This study
+D6A-1322	D6A-ultramafic	47.7	268.2		This study
+D6A-1301	D6A-ultramafic	47.7	268.2		This study
