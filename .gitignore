@@ -41,3 +41,9 @@ software_setup/Demag_GUI_tutorial/data/**/sites.txt
 software_setup/Demag_GUI_tutorial/data/**/specimens.txt
 software_setup/Demag_GUI_tutorial/data/SS20-/SS20-_*.txt
 software_setup/Demag_GUI_tutorial/data/SS20-/Michipicoten-Island_*.txt
+
+# MagIC/RockmagPy demo notebook: keep only the dated IRM database export
+# (SSRM_2026_<date>.txt); ignore the tables it unpacks and the contributions it
+# downloads from the MagIC database at run time.
+D-6A_data/D-6A_MagIC/unpacked/
+D-6A_data/D-6A_MagIC/magic_downloads/

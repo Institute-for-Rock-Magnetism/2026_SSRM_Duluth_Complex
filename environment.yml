@@ -6,6 +6,9 @@ dependencies:
   - numpy
   - pandas
   - matplotlib
+  - bokeh
+  - ipywidgets
+  - ipympl
   - jupyterlab
   - notebook
   - ipykernel
