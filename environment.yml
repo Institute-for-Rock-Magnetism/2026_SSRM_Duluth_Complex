@@ -14,3 +14,4 @@ dependencies:
   - pip:
     - pystrat
     - jupyter-book>=2.0
+    - pmagpy

@@ -36,6 +36,7 @@ project:
     - file: README.md
     - file: Duluth_Complex_background/duluth_complex_background.md
     - file: Duluth_Complex_background/aeromagnetic_minnesota.md
+    - file: Duluth_Complex_background/duluth_complex_paleomagnetism.ipynb
     - title: The Severson 1992 log
       children:
         - file: D-6A_log/D_6A_stratigraphic_column.ipynb
