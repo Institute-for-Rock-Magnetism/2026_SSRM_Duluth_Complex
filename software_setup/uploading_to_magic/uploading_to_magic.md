@@ -14,6 +14,16 @@ This page picks up where the [software setup guide](../rockmagpy_setup.md) leave
 
 You need your measurements exported from the IRM database in MagIC format. That is a single text file holding all of the tables one after another, in the format described by the [MagIC data model](https://earthref.org/MagIC/data-models/3.0). Ask at the instrument station if you are not sure whether your export has been made.
 
+The exports from the July 22 measurements are in the [tutorial repository](https://github.com/Institute-for-Rock-Magnetism/2026_SSRM_MagIC_RockmagPy_tutorial) under `data/group_files_July22/`, one file per group. Download the file for your group with the raw link below (right-click → **Save Link As**), or work with your local clone of that repository if you have one:
+
+| Group (MagIC location) | File | Raw download link |
+| --- | --- | --- |
+| `D6A-AGT` | `D6A-AGT.TXT` | <https://raw.githubusercontent.com/Institute-for-Rock-Magnetism/2026_SSRM_MagIC_RockmagPy_tutorial/main/data/group_files_July22/D6A-AGT.TXT> |
+| `D6A-BAN` | `D6A-BAN.TXT` | <https://raw.githubusercontent.com/Institute-for-Rock-Magnetism/2026_SSRM_MagIC_RockmagPy_tutorial/main/data/group_files_July22/D6A-BAN.TXT> |
+| `D6A-BH` | `D6A-BH.TXT` | <https://raw.githubusercontent.com/Institute-for-Rock-Magnetism/2026_SSRM_MagIC_RockmagPy_tutorial/main/data/group_files_July22/D6A-BH.TXT> |
+| `D6A-felsic` | `D6A-felsic.TXT` | <https://raw.githubusercontent.com/Institute-for-Rock-Magnetism/2026_SSRM_MagIC_RockmagPy_tutorial/main/data/group_files_July22/D6A-felsic.TXT> |
+| `D6A-ultramafic` | `D6A-ultramafic.TXT` | <https://raw.githubusercontent.com/Institute-for-Rock-Magnetism/2026_SSRM_MagIC_RockmagPy_tutorial/main/data/group_files_July22/D6A-ultramafic.TXT> |
+
 You also need an EarthRef account. If you do not have one, make one at <https://earthref.org> — you can sign in with your ORCID.
 
 ## 1. Upload the file
