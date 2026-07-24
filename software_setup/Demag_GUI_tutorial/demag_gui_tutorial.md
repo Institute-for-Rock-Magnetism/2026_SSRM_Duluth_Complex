@@ -109,6 +109,10 @@ Now that the SS20 site data have been converted to MagIC format, we can use the 
 
 <img src="images/Demag_GUI_panel.png" width="700"/>
 
+:::{note}
+To zoom in the vector component plot, simply click and drag the area to highlight the area you want to zoom in. However, there is no zoom out function in Demag GUI. You would need to toggle back-and-forth through the specimens to reset the view i.e. click previous, then next.
+:::
+
 3. Let's make fits to the high-temperature component that dominantly unblocks between 400ºC and 580ºC. To make a fit you can click add fit or double-click in the box that lists the steps. You can adjust the bounds of the fit by double-clicking in the steps box or by selecting the upper and lower bounds from the drop-down bounds menus. You can change the name of the fit by selecting the default fit name *Fit 1*, changing the name, and pressing enter. Perhaps you want to call this the **HT** (high-temperature fit) as there is also a low-temperature component revealed in the thermal demagnetization data.
 
 4. Let's go through and make HT fits for all the samples in the site.
