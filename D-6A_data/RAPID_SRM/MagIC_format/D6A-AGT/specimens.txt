@@ -1,0 +1,34 @@
+tab	specimens
+specimen	sample	analysts	citations	volume	weight
+D6A-1286a	D6A-1286		This study	 3.100e-05	
+D6A-1264a	D6A-1264		This study	 1.920e-05	
+D6A-1249a	D6A-1249		This study	 2.540e-05	
+D6A-1236a	D6A-1236		This study	 2.780e-05	
+D6A-1215a	D6A-1215		This study	 3.190e-05	
+D6A-1196a	D6A-1196		This study	 3.230e-05	
+D6A-1171a	D6A-1171		This study	 3.160e-05	
+D6A-1140a	D6A-1140		This study	 3.200e-05	
+D6A-1110a	D6A-1110		This study	 3.140e-05	
+D6A-1108a	D6A-1108		This study	 3.080e-05	
+D6A-1089a	D6A-1089		This study	 3.230e-05	
+D6A-1050a	D6A-1050		This study	 3.220e-05	
+D6A-1025a	D6A-1025		This study	 2.990e-05	
+D6A-1005a	D6A-1005		This study	 2.980e-05	
+D6A-953a	D6A-953		This study	 3.000e-05	
+D6A-902a	D6A-902		This study	 3.110e-05	
+D6A-852a	D6A-852		This study	 3.250e-05	
+D6A-800a	D6A-800		This study	 3.020e-05	
+D6A-775a	D6A-775		This study	 3.070e-05	
+D6A-754a	D6A-754		This study	 3.110e-05	
+D6A-713a	D6A-713		This study	 3.140e-05	
+D6A-633a	D6A-633		This study	 3.060e-05	
+D6A-594a	D6A-594		This study	 3.050e-05	
+D6A-555a	D6A-555		This study	 3.040e-05	
+D6A-515a	D6A-515		This study	 3.060e-05	
+D6A-478a	D6A-478		This study	 3.050e-05	
+D6A-459a	D6A-459		This study	 2.920e-05	
+D6A-323a	D6A-323		This study	 3.060e-05	
+D6A-285a	D6A-285		This study	 3.120e-05	
+D6A-238a	D6A-238		This study	 3.080e-05	
+D6A-202a	D6A-202		This study	 3.450e-05	
+D6A-163a	D6A-163		This study	 3.050e-05	

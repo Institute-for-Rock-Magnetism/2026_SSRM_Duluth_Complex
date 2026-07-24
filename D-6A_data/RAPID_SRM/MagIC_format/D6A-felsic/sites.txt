@@ -1,0 +1,12 @@
+tab	sites
+site	location	lat	lon	analysts	citations
+D6A-2123	D6A-felsic	47.7	268.2		This study
+D6A-2105	D6A-felsic	47.7	268.2		This study
+D6A-2095	D6A-felsic	47.7	268.2		This study
+D6A-2076	D6A-felsic	47.7	268.2		This study
+D6A-2046	D6A-felsic	47.7	268.2		This study
+D6A-2031	D6A-felsic	47.7	268.2		This study
+D6A-653	D6A-felsic	47.7	268.2		This study
+D6A-420	D6A-felsic	47.7	268.2		This study
+D6A-441	D6A-felsic	47.7	268.2		This study
+D6A-397	D6A-felsic	47.7	268.2		This study

@@ -1,0 +1,12 @@
+tab	samples
+sample	site	height	geologic_classes	geologic_types	lithologies	analysts	azimuth	azimuth_dec_correction	bed_dip	bed_dip_direction	dip	citations	method_codes
+D6A-2123	D6A-2123	2123					    0.0	    0.0	    0.0	  180.0	  -90.0	This study	SO-CMD-NORTH
+D6A-2105	D6A-2105	2105					    0.0	    0.0	    0.0	  180.0	  -90.0	This study	SO-CMD-NORTH
+D6A-2095	D6A-2095	2095					    0.0	    0.0	    0.0	  180.0	  -90.0	This study	SO-CMD-NORTH
+D6A-2076	D6A-2076	2076					    0.0	    0.0	    0.0	  180.0	  -90.0	This study	SO-CMD-NORTH
+D6A-2046	D6A-2046	2046					    0.0	    0.0	    0.0	  180.0	  -90.0	This study	SO-CMD-NORTH
+D6A-2031	D6A-2031	2031					    0.0	    0.0	    0.0	  180.0	   -0.0	This study	SO-CMD-NORTH
+D6A-653	D6A-653	653					    0.0	    0.0	    0.0	  180.0	  -90.0	This study	SO-CMD-NORTH
+D6A-420	D6A-420	420					    0.0	    0.0	    0.0	  180.0	  -90.0	This study	SO-CMD-NORTH
+D6A-441	D6A-441	441					    0.0	    0.0	    0.0	  180.0	  -90.0	This study	SO-CMD-NORTH
+D6A-397	D6A-397	397					    0.0	    0.0	    0.0	  180.0	  -90.0	This study	SO-CMD-NORTH
