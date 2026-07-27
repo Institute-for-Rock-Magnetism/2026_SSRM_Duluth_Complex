@@ -1,0 +1,14 @@
+tab	sites
+site	location	lat	lon	analysts	citations
+D6A-1699	D6A-BH	47.7	268.2		This study
+D6A-1592	D6A-BH	47.7	268.2		This study
+D6A-1581	D6A-BH	47.7	268.2		This study
+D6A-1566	D6A-BH	47.7	268.2		This study
+D6A-1561	D6A-BH	47.7	268.2		This study
+D6A-1551	D6A-BH	47.7	268.2		This study
+D6A-1528	D6A-BH	47.7	268.2		This study
+D6A-1509	D6A-BH	47.7	268.2		This study
+D6A-1504	D6A-BH	47.7	268.2		This study
+D6A-1500	D6A-BH	47.7	268.2		This study
+D6A-1465	D6A-BH	47.7	268.2		This study
+D6A-1464	D6A-BH	47.7	268.2		This study
