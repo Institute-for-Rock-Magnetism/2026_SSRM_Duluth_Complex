@@ -16,6 +16,31 @@ The whole setup takes about 15–20 minutes with a decent internet connection, a
 
 ## Step 1 — Install Miniforge
 
+Python may already be on your computer from a past class or project — most often under the name **Anaconda** or **Miniconda**. Installing a second copy alongside an old one is a common source of confusing problems, so take a moment to check before installing anything:
+
+::::{tab-set}
+:::{tab-item} Mac
+:sync: mac
+
+Open the Terminal: press <kbd>⌘ command</kbd>+<kbd>space</kbd> to open Spotlight search, type `terminal`, and press <kbd>return</kbd>. In the window that opens, type this line and press <kbd>return</kbd>:
+
+```bash
+conda --version
+```
+
+- If it prints a version number (like `conda 24.11.0`) — or the command line already starts with `(base)` — your computer **already has conda**, and you should not install another one. Skip the rest of this step and go straight to [Step 2](#step-2); every command in this guide works the same with your existing installation.
+- If it prints `command not found`, you don't have conda. Continue below and install Miniforge.
+:::
+
+:::{tab-item} Windows (PC)
+:sync: windows
+
+Open the Start menu and type `anaconda`. If anything named **Anaconda Prompt** (including **Anaconda Prompt (miniconda3)**) or **Anaconda Navigator** appears in the results, your computer **already has conda**, and you should not install another one. Skip the rest of this step and go straight to [Step 2](#step-2) — just use the **Anaconda Prompt** wherever this guide says *Miniforge Prompt*; every command in this guide works the same there.
+
+If nothing named Anaconda shows up, you don't have conda. Continue below and install Miniforge.
+:::
+::::
+
 Miniforge is the recommended way to get Python for scientific work. The steps differ between Mac and Windows, so follow the tab for your computer.
 
 ::::{tab-set}
@@ -54,18 +79,19 @@ On Windows, Miniforge has a point-and-click installer, and afterwards you'll use
 3. Click through the installer accepting the defaults: **Next**, **I Agree**, install for **Just Me**, default install location, and the pre-checked options on the final screen are fine. Click **Install**, then **Finish**.
 4. Open the Start menu, type `miniforge`, and open **Miniforge Prompt**. A window opens showing `(base)` at the start of the line — that's how you know the install worked.
 
-Whenever this guide says to type a command, it goes in the **Miniforge Prompt** — not in "Command Prompt" or "PowerShell", which won't know where Python is. To paste into the Miniforge Prompt, right-click in the window or press <kbd>ctrl</kbd>+<kbd>V</kbd>.
+Whenever this guide says to type a command, it goes in the **Miniforge Prompt** — not in "Command Prompt" or "PowerShell", which won't know where Python is (and not in an "Anaconda Prompt", if your Start menu has one of those too). To paste into the Miniforge Prompt, right-click in the window or press <kbd>ctrl</kbd>+<kbd>V</kbd>.
 :::
 ::::
 
+(step-2)=
 ## Step 2 — Create the environment and install the software
 
-These commands are the same on Mac and Windows. Type them in the Terminal (Mac) or the Miniforge Prompt (Windows), one at a time, pressing <kbd>return</kbd>/<kbd>enter</kbd> after each and waiting for it to finish before the next. A command is finished when the `(base)` or `(rockmag)` prompt reappears and the cursor is waiting for input again.
+These commands are the same on Mac and Windows, and they work the same whether you installed Miniforge in Step 1 or already had Anaconda/Miniconda. Type them in the Terminal (Mac) or the Miniforge Prompt or Anaconda Prompt (Windows), one at a time, pressing <kbd>return</kbd>/<kbd>enter</kbd> after each and waiting for it to finish before the next. A command is finished when the `(base)` or `(rockmag)` prompt reappears and the cursor is waiting for input again.
 
-First, create the `rockmag` environment with Python, JupyterLab, and the plotting packages the notebooks use. This downloads a few hundred megabytes and can take several minutes; when asked to confirm, type `y` and press <kbd>return</kbd>:
+First, create the `rockmag` environment with Python, JupyterLab, and the plotting packages the notebooks use. Copy the whole line — the `-c conda-forge --override-channels` part tells conda where to download packages from, which is what makes the command behave the same on every installation. This downloads a few hundred megabytes and can take several minutes; when asked to confirm, type `y` and press <kbd>return</kbd>:
 
 ```bash
-conda create -n rockmag python=3.12 jupyterlab ipywidgets ipympl bokeh statsmodels dynesty
+conda create -n rockmag -c conda-forge --override-channels python=3.12 jupyterlab ipywidgets ipympl bokeh statsmodels dynesty cartopy
 ```
 
 Next, switch into the new environment. The `(base)` at the start of the line changes to `(rockmag)`, which tells you the environment is active:
@@ -135,7 +161,7 @@ Two things to know while JupyterLab is running:
 
 Everything above is one-time setup. From now on, getting back to work is:
 
-1. Open the Terminal (Mac) or Miniforge Prompt (Windows).
+1. Open the Terminal (Mac) or the Miniforge Prompt or Anaconda Prompt (Windows — whichever you used during setup).
 2. `conda activate rockmag`
 3. `jupyter lab`
 
@@ -143,6 +169,8 @@ Everything above is one-time setup. From now on, getting back to work is:
 
 - **`conda: command not found` (Mac)** — either the Terminal window predates the install (quit and reopen Terminal), or the installer's *"initialize conda"* question was answered "no". To fix the latter, run `~/miniforge3/bin/conda init` in the Terminal, then quit and reopen it.
 - **`conda` is not recognized (Windows)** — you're typing into Command Prompt or PowerShell instead of the **Miniforge Prompt**. Open the Start menu, type `miniforge`, and use Miniforge Prompt.
+- **`PackagesNotFoundError` when creating the environment** — part of the Step 2 command was probably missed when copying. Make sure the line includes `-c conda-forge --override-channels`, which tells conda where to find the packages, and run it again.
+- **Not sure which Python installation you're using** — run `conda info --base`. The printed folder ends in `miniforge3` for Miniforge or `anaconda3`/`miniconda3` for Anaconda/Miniconda. Any of these works with this guide; what matters is using the same one throughout (on Windows, that means always opening the same prompt).
 - **`ModuleNotFoundError: No module named 'pmagpy'` when running a notebook** — JupyterLab was started without the environment active. Shut it down, run `conda activate rockmag`, and start `jupyter lab` again.
 - **The browser doesn't open when you run `jupyter lab`** — look in the Terminal / Miniforge Prompt output for a line starting with `http://localhost:8888/lab?token=...` and copy that whole address into your browser.
 - **Interactive plots or widgets don't appear** — use the menu **Kernel → Restart Kernel and Run All Cells** to rerun the notebook from a clean start; if that doesn't fix it, make sure the environment was created with the full command in Step 2 (it includes `ipywidgets` and `bokeh`).
