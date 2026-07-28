@@ -1,12 +1,12 @@
-tab	specimens
-specimen	sample	analysts	citations	method_codes	volume	weight
-D6A-2123a	D6A-2123		This study		 2.790e-05	
-D6A-2105a	D6A-2105		This study	LP-NOMAG		
-D6A-2095a	D6A-2095		This study		 2.870e-05	
-D6A-2076a	D6A-2076		This study		 2.850e-05	
-D6A-2046a	D6A-2046		This study	LP-NOMAG		
-D6A-2031a	D6A-2031		This study		 1.830e-05	
-D6A-653a	D6A-653		This study		 1.780e-05	
-D6A-420a	D6A-420		This study		 2.890e-05	
-D6A-441a	D6A-441		This study		 2.160e-05	
-D6A-397a	D6A-397		This study		 2.450e-05	
+tab 	specimens
+analysts	citations	method_codes	sample	specimen	volume	weight
+	This study		D6A-2123	D6A-2123a	1.100e-05	2.792e-02
+	This study	LP-NOMAG	D6A-2105	D6A-2105a	1.100e-05	
+	This study		D6A-2095	D6A-2095a	1.100e-05	2.872e-02
+	This study		D6A-2076	D6A-2076a	1.100e-05	2.851e-02
+	This study	LP-NOMAG	D6A-2046	D6A-2046a	1.100e-05	
+	This study		D6A-2031	D6A-2031a	1.100e-05	1.830e-02
+	This study		D6A-653	D6A-653a	1.100e-05	1.783e-02
+	This study		D6A-420	D6A-420a	1.100e-05	2.886e-02
+	This study		D6A-441	D6A-441a	1.100e-05	2.155e-02
+	This study		D6A-397	D6A-397a	1.100e-05	2.446e-02

@@ -1,0 +1,7 @@
+tab 	locations
+analysts	citations	lat_n	lat_s	location	lon_e	lon_w
+	This study	47.7	47.7	D6A-AGT	268.2	268.2
+	This study	47.7	47.7	D6A-BAN	268.2	268.2
+	This study	47.7	47.7	D6A-BH	268.2	268.2
+	This study	47.7	47.7	D6A-felsic	268.2	268.2
+	This study	47.7	47.7	D6A-ultramafic	268.2	268.2

@@ -1,13 +1,13 @@
-tab	specimens
-specimen	sample	analysts	citations	volume	weight
-D6A-2022a	D6A-2022		This study	 2.200e-05	
-D6A-2009a	D6A-2009		This study	 2.310e-05	
-D6A-2001a	D6A-2001		This study	 2.420e-05	
-D6A-1989a	D6A-1989		This study	 1.910e-05	
-D6A-1926a	D6A-1926		This study	 2.210e-05	
-D6A-1913a	D6A-1913		This study	 2.600e-05	
-D6A-1806a	D6A-1806		This study	 2.400e-05	
-D6A-1789a	D6A-1789		This study	 2.800e-05	
-D6A-1779a	D6A-1779		This study	 2.630e-05	
-D6A-1762a	D6A-1762		This study	 2.510e-05	
-D6A-1727a	D6A-1727		This study	 2.110e-05	
+tab 	specimens
+analysts	citations	sample	specimen	volume	weight
+	This study	D6A-2022	D6A-2022a	1.100e-05	2.200e-02
+	This study	D6A-2009	D6A-2009a	1.100e-05	2.308e-02
+	This study	D6A-2001	D6A-2001a	1.100e-05	2.415e-02
+	This study	D6A-1989	D6A-1989a	1.100e-05	1.910e-02
+	This study	D6A-1926	D6A-1926a	1.100e-05	2.215e-02
+	This study	D6A-1913	D6A-1913a	1.100e-05	2.598e-02
+	This study	D6A-1806	D6A-1806a	1.100e-05	2.401e-02
+	This study	D6A-1789	D6A-1789a	1.100e-05	2.796e-02
+	This study	D6A-1779	D6A-1779a	1.100e-05	2.630e-02
+	This study	D6A-1762	D6A-1762a	1.100e-05	2.509e-02
+	This study	D6A-1727	D6A-1727a	1.100e-05	2.112e-02
